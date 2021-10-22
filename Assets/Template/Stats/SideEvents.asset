@@ -10,7 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f3cf8ddd794f754db12839f00210bc7, type: 3}
-  m_Name: MainStory
+  m_Name: SideEvents
   m_EditorClassIdentifier: 
-  eventsName:
-  - test1
+  eventsName: []
