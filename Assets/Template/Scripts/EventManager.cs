@@ -12,7 +12,7 @@ public class EventManager : MonoBehaviour
     private IDictionary<string, UnityEvent> storyEvents;
 
     private float corruption;
-    private float multiplier;
+    private float multiplier; // should not be negative
 
     void Awake()
     {
@@ -26,7 +26,7 @@ public class EventManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetCorruption(story.initCorruption);
+        corruption = story.initCorruption;
     }
 
     // Update is called once per frame
@@ -48,9 +48,19 @@ public class EventManager : MonoBehaviour
         return multiplier;
     }
 
-    public void SetCorruption(float newCorruption)
+    public void AddCorruption(float newCorruption)
     {
-        corruption = newCorruption;
+        if(newCorruption > 0)
+        {
+            corruption += newCorruption*multiplier;
+        }
+        else
+        {
+            if(multiplier != 0)
+            {
+                corruption += newCorruption / multiplier;
+            }
+        }
         CorruptionModified.Invoke();
     }
 
