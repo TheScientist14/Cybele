@@ -185,14 +185,6 @@ public class GameManager : MonoBehaviour
     public void ActiveDeck()
     {
         deck.SetActive(true);
-        if (!armyActivated)
-        {
-            armyCard.SetActive(false);
-        }
-        else
-        {
-            armyCard.SetActive(true);
-        }
     }
 
     public void DeactiveDeck()
