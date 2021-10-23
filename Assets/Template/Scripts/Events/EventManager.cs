@@ -53,6 +53,11 @@ public class EventManager : MonoBehaviour
         EventHasBeenSelected.Invoke();
     }
 
+    public void ClearSelection()
+    {
+
+    }
+
     /*
      * Event selection listener handling
      */

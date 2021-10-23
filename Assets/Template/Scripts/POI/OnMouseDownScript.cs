@@ -27,11 +27,14 @@ public class OnMouseDownScript : MonoBehaviour
 
     void OnMouseDown()
     {
-        alert.SetActive(false);
-        GameManager.instance.RemoveEventAwake();
-        camera.transform.position = gameObject.transform.position + new Vector3(0,0,-2.5f);
-        camera.orthographicSize = 0.75f;
-        GameManager.instance.ActiveDeck();
-        EventManager.instance.SelectEvent(evnt);
+        if (evnt.isActiveAndEnabled)
+        {
+            alert.SetActive(false);
+            GameManager.instance.RemoveEventAwake();
+            camera.transform.position = gameObject.transform.position + new Vector3(0,0,-2.5f);
+            camera.orthographicSize = 0.75f;
+            GameManager.instance.ActiveDeck();
+            EventManager.instance.SelectEvent(evnt);
+        }
     }
 }
