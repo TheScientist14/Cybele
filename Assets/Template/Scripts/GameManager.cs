@@ -15,8 +15,7 @@ public class GameManager : MonoBehaviour
     private float timer;
     // corruption related variables
     private float corruption;
-    private float tempPosMultiplier; // should not be negative
-    private float tempNegMultiplier; // should not be negative
+    private float tempMultiplier; // should not be negative
     private float storyMultiplier; // never reset
     private static bool isGameFinished;
     private bool armyActivated;
@@ -109,6 +108,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator spawn()
     {
+        yield return new WaitForSeconds(3);
         float spawnRate = 10f;
         while (!isGameFinished)
         {
