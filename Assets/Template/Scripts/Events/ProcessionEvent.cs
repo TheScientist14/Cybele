@@ -29,7 +29,7 @@ public class ProcessionEvent : EventBehaviour
 
     public override string GetEventName()
     {
-        return "Procession des adeptes de Cybèle en pleine rue";
+        return "Procession des adeptes de Cybï¿½le en pleine rue";
     }
 
     public override Criticiality GetEventCriticality()
@@ -46,5 +46,6 @@ public class ProcessionEvent : EventBehaviour
     void Update()
     {
         
+        base.Update();
     }
 }

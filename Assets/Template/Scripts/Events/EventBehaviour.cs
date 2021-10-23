@@ -5,8 +5,8 @@ using UnityEngine;
 public abstract class EventBehaviour : MonoBehaviour
 {
     private float initTime;
-    private float delayStart;
-    private float delayEnd;
+    private float delayStart = 5f;
+    private float delayEnd = float.MaxValue;
     protected float corruptionDelta = 5;
 
     public enum Criticiality{
@@ -21,7 +21,7 @@ public abstract class EventBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (GameManager.instance.GetTime() > initTime + delayStart)
         {

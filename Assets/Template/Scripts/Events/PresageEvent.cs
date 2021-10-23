@@ -15,6 +15,7 @@ public class PresageEvent : EventBehaviour
     void Update()
     {
         
+        base.Update();
     }
 
     public override void ArmyConsequence()
