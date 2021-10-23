@@ -23,9 +23,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameObject[] poi;
     private int randomPOI;
-    
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
         // Singleton
         if(instance == null)
@@ -37,6 +36,11 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+    
+    // Start is called before the first frame update
+    void Start()
+    {
         deck.SetActive(false);
         isGameFinished = false;
         armyActivated = true;
@@ -72,9 +76,6 @@ public class GameManager : MonoBehaviour
             isGameFinished = true;
         }
         
-        Debug.Log("armyActivated : " + armyActivated);
-        Debug.Log("Positif event spawn : " + posistifEvent);
-        Debug.Log("non stop conversion: " + nonStopConversion);
     }
 
     void RandomAlert()
@@ -102,7 +103,7 @@ public class GameManager : MonoBehaviour
         {
             RandomAlert();
             yield return new WaitForSeconds(1 / spawnRate);
-            spawnRate -= 0.02f;
+            spawnRate -= 0.05f;
         }
     }
 

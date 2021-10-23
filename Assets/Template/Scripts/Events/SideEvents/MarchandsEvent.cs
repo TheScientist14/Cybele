@@ -13,7 +13,7 @@ public class MarchandsEvent : EventBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        base.Update();
     }
     public override Criticiality GetEventCriticality()
     {
@@ -22,7 +22,7 @@ public class MarchandsEvent : EventBehaviour
 
     public override string GetEventName()
     {
-        return "Des marchands phrygiens débarquent";
+        return "Des marchands phrygiens dï¿½barquent";
     }
 
     public override bool IsPositive()

@@ -25,6 +25,8 @@ public class UIScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+        GameManager.instance.CorruptionModified.AddListener(UpdateConversionBar);
     }
 
     // Update is called once per frame

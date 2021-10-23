@@ -14,6 +14,7 @@ public class TheatreEvent : EventBehaviour
     void Update()
     {
         
+        base.Update();
     }
 
     public override void ArmyConsequence()
@@ -28,7 +29,7 @@ public class TheatreEvent : EventBehaviour
 
     public override string GetEventName()
     {
-        return "Pièces de théâtre des Mégalésies";
+        return "Piï¿½ces de thï¿½ï¿½tre des Mï¿½galï¿½sies";
     }
 
     public override bool IsPositive()
