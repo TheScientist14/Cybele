@@ -28,5 +28,6 @@ public class OnMouseDownScript : MonoBehaviour
         alert.SetActive(false);
         camera.transform.position = gameObject.transform.position + new Vector3(0,0,-2.5f);
         camera.orthographicSize = 0.75f;
+        GameManager.instance.ActiveDeck();
     }
 }

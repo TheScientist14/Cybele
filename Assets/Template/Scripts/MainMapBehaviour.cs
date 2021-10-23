@@ -8,6 +8,7 @@ public class MainMapBehaviour : MonoBehaviour
 
     private new Camera camera;
     private Vector3 cameraPositionDefault;
+    public GameObject deck;
 
     void Awake()
     {
@@ -27,6 +28,7 @@ public class MainMapBehaviour : MonoBehaviour
         {
             camera.transform.position = cameraPositionDefault;
             camera.orthographicSize = 5f;
+            GameManager.instance.DeactiveDeck();
         }
     }
 }

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public float initCorruption;
 
     public UnityEvent CorruptionModified;
+    public GameObject deck;
 
     private float timer;
     // corruption related variables
@@ -15,7 +16,10 @@ public class GameManager : MonoBehaviour
     private float tempMultiplier; // should not be negative
     private float storyMultiplier; // never reset
     private bool isGameFinished;
-
+    private bool armyActivated;
+    private bool posistifEvent;
+    private bool nonStopConversion;
+    
     public static GameManager instance;
     public GameObject[] poi;
     private int randomPOI;
@@ -33,8 +37,12 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        deck.SetActive(false);
         isGameFinished = false;
-        timer = 40f;
+        armyActivated = true;
+        posistifEvent = true;
+        nonStopConversion = false;
+        timer = 0f;
         corruption = initCorruption;
         tempMultiplier = 0f;
         storyMultiplier = 0f;
@@ -45,12 +53,28 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
+        timer += Time.deltaTime;
         UIScript.instance.UpdateTimer();
-        if ((int) timer == 0)
+        if ((int) timer > 37)
+        {
+            armyActivated = false;
+        } else if ((int) timer > 72)
+        {
+            armyActivated = true;
+        } else if ((int) timer > 108)
+        {
+            posistifEvent = false;
+        } else if ((int) timer > 264)
+        {
+            nonStopConversion = true;
+        } else if ((int) timer == 324)
         {
             isGameFinished = true;
         }
+        
+        Debug.Log("armyActivated : " + armyActivated);
+        Debug.Log("Positif event spawn : " + posistifEvent);
+        Debug.Log("non stop conversion: " + nonStopConversion);
     }
 
     void RandomAlert()
@@ -131,5 +155,15 @@ public class GameManager : MonoBehaviour
     public void SetCorruptionStoryMultplier(float newMultiplier)
     {
         storyMultiplier = newMultiplier;
+    }
+
+    public void ActiveDeck()
+    {
+        deck.SetActive(true);
+    }
+
+    public void DeactiveDeck()
+    {
+        deck.SetActive(false);
     }
 }
