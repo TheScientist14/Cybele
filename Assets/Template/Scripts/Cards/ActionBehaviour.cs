@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class ActionBehaviour : MonoBehaviour
 {
+    protected static string lastAction;
+
     // Start is called before the first frame update
     void Start()
     {

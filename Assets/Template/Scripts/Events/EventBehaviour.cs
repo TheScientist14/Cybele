@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class EventBehaviour : MonoBehaviour
 {
     private float initTime;
-    private float delayStart;
+    private float delayStart = 5;
     private float delayEnd;
     protected float corruptionDelta = 5;
 

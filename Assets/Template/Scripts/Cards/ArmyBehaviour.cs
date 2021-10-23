@@ -13,11 +13,15 @@ public class ArmyBehaviour : ActionBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(lastAction == "army")
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public override void DoAction()
     {
-        
+        GameManager.instance.SetCorruptionTempMultiplier(1);
+        lastAction = "army";
     }
 }
