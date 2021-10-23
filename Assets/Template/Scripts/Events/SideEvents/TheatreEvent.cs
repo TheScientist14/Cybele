@@ -19,7 +19,10 @@ public class TheatreEvent : EventBehaviour
 
     public override void ArmyConsequence()
     {
-        GameManager.instance.AddCorruption(2f);
+        float oldMultiplier = GameManager.instance.GetCorruptionTempMultiplier();
+        GameManager.instance.SetCorruptionTempMultiplier(-0.5f);
+        DoEvent();
+        GameManager.instance.SetCorruptionTempMultiplier(oldMultiplier);
     }
 
     public override Criticiality GetEventCriticality()
@@ -32,23 +35,18 @@ public class TheatreEvent : EventBehaviour
         return "Pi�ces de th��tre des M�gal�sies";
     }
 
-    public override bool IsPositive()
-    {
-        return false;
-    }
-
     public override void PopulationConsequence()
     {
-        GameManager.instance.AddCorruption(10);
+        DoEvent();
     }
 
     public override void SabotageConsequence()
     {
-        GameManager.instance.AddCorruption(5);
+        DoEvent();
     }
 
     public override void SpeechConsequence()
     {
-
+        DoEvent();
     }
 }

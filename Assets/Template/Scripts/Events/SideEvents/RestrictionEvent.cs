@@ -7,7 +7,7 @@ public class RestrictionEvent : EventBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        activeCorruptionDelta = -5f;
     }
 
     // Update is called once per frame
@@ -18,7 +18,7 @@ public class RestrictionEvent : EventBehaviour
 
     public override void ArmyConsequence()
     {
-
+        DoEvent();
     }
 
     public override Criticiality GetEventCriticality()
@@ -31,22 +31,18 @@ public class RestrictionEvent : EventBehaviour
         return "Des restrictions sont mises en place";
     }
 
-    public override bool IsPositive()
-    {
-        return true;
-    }
-
     public override void PopulationConsequence()
     {
-
+        DoEvent();
     }
 
     public override void SabotageConsequence()
     {
+        throw new System.Exception("Can’t sabotage your own rules !");
     }
 
     public override void SpeechConsequence()
     {
-
+        DoEvent();
     }
 }

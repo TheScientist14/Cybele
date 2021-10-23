@@ -22,7 +22,7 @@ public class SpeechBehaviour : ActionBehaviour
     public override void DoAction()
     {
         EventManager.instance.GetSelectedEvent().SpeechConsequence();
-        GameManager.instance.SetCorruptionTempMultiplier(GameManager.instance.GetCorruptionTempMultiplier() / 2);
+        GameManager.instance.SetCorruptionTempMultiplier(GameManager.instance.GetCorruptionTempMultiplier() / 1.5f);
         lastAction = id;
         hasBeenUsed = true;
     }

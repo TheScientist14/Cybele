@@ -20,7 +20,7 @@ public class PresageEvent : EventBehaviour
 
     public override void ArmyConsequence()
     {
-        
+        DoEvent();
     }
 
     public override Criticiality GetEventCriticality()
@@ -33,24 +33,19 @@ public class PresageEvent : EventBehaviour
         return "Sombre présage";
     }
 
-    public override bool IsPositive()
-    {
-        return false;
-    }
-
     public override void PopulationConsequence()
     {
-        
+        DoEvent();
     }
 
     public override void SabotageConsequence()
     {
-        GameManager.instance.AddMultipliedCorruption(5f);
+        DoEvent();
     }
 
     public override void SpeechConsequence()
     {
-        
+        DoEvent();
     }
 
 }

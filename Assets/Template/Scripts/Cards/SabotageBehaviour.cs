@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SabotageBehaviour : ActionBehaviour
 {
-    private float probability = 50;
+    private float probabilitySuccess = 30;
 
     // Start is called before the first frame update
     void Start()
@@ -20,20 +20,21 @@ public class SabotageBehaviour : ActionBehaviour
 
     public override void DoAction()
     {
-        if(Random.Range(0, 1) > 0.01 * probability)
+        if(Random.Range(0, 1) > 0.01 * probabilitySuccess)
         {
             // sabotage has failed
             EventManager.instance.GetSelectedEvent().SabotageConsequence();
-            lastAction = id;
         }
         else
         {
             // sabotage has been successful
         }
+        lastAction = id;
     }
 
     public override bool IsActive()
     {
-        return true;
+        return (GameManager.instance.GetCorruption() < 50
+            && !EventManager.instance.GetSelectedEvent().IsPositive());
     }
 }
