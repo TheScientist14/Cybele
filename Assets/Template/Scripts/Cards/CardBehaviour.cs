@@ -16,15 +16,18 @@ public class CardBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CardSelection.instance.AddListener(MoveIfSelected);
+        CardSelection.instance.AddListener(HighlightIfSelected);
     }
 
     void OnMouseDown()
     {
-        CardSelection.instance.SelectAction(cardAction);
+        if (EventManager.instance.GetSelectedEvent())
+        {
+            CardSelection.instance.SelectAction(cardAction);
+        }
     }
 
-    public void MoveIfSelected()
+    public void HighlightIfSelected()
     {
         if(CardSelection.instance.GetSelectedAction() == this)
         {

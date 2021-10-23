@@ -9,12 +9,18 @@ public class EventManager : MonoBehaviour
     public EventList sideEventList;
 
     private EventBehaviour selectedEvent;
+    public UnityEvent EventHasBeenSelected;
 
     //private IDictionary<string, EventBehaviour> events;
     //private EventBehaviour[] events;
 
     public static EventManager instance;
 
+    void Awake()
+    {
+        EventHasBeenSelected = new UnityEvent();
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -47,23 +53,27 @@ public class EventManager : MonoBehaviour
         
     }
 
-
-    /*
-    /*
-     * Events listeners handling
-     * /
-    public void AddListener(string eventName, UnityAction listener)
+    public EventBehaviour GetSelectedEvent()
     {
-        events[eventName].AddListener(listener);
+        return selectedEvent;
     }
 
-    public void RemoveListener(string eventName, UnityAction listener)
+    public void SelectEvent(EventBehaviour evnt)
     {
-        events[eventName].RemoveListener(listener);
+        selectedEvent = evnt;
+        EventHasBeenSelected.Invoke();
     }
 
-    public void Invoke(string eventName)
+    /*
+     * Event selection listener handling
+     */
+    public void AddEventSelectionListener(UnityAction listener)
     {
-        events[eventName].Invoke();
-    }*/
+        EventHasBeenSelected.AddListener(listener);
+    }
+
+    public void RemoveEventSelectionListener(UnityAction listener)
+    {
+        EventHasBeenSelected.RemoveListener(listener);
+    }
 }
