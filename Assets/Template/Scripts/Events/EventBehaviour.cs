@@ -4,6 +4,11 @@ using UnityEngine;
 
 public abstract class EventBehaviour : MonoBehaviour
 {
+    public enum Criticiality{
+        Side,
+        Main
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +20,13 @@ public abstract class EventBehaviour : MonoBehaviour
     {
         
     }
+
+    public abstract void ArmyConsequence();
+    public abstract void SpeechConsequence();
+    public abstract void SabotageConsequence();
+    public abstract void PopulationConsequence();
+
+    public abstract string GetEventName();
+
+    public abstract Criticiality GetEventCriticality();
 }

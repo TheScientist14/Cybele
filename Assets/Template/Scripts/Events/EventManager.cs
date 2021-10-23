@@ -8,25 +8,37 @@ public class EventManager : MonoBehaviour
     public EventList storyEventList;
     public EventList sideEventList;
 
-    private IDictionary<string, UnityEvent> events;
+    private EventBehaviour selectedEvent;
 
-    void Awake()
-    {
-        // init events
-        events = new Dictionary<string, UnityEvent>();
-        foreach (string name in storyEventList.eventsName)
-        {
-            events.Add(name.ToLower(), new UnityEvent());
-        }
-        foreach (string name in sideEventList.eventsName)
-        {
-            events.Add(name.ToLower(), new UnityEvent());
-        }
-    }
+    //private IDictionary<string, EventBehaviour> events;
+    //private EventBehaviour[] events;
+
+    public static EventManager instance;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Singleton
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        // init events
+        /*events = new Dictionary<string, UnityEvent>();
+        foreach (EventBehaviour evnt in storyEventList.events)
+        {
+            events.Add(evnt.GetEventName().ToLower(), new UnityEvent());
+        }
+        foreach (EventBehaviour evnt in sideEventList.events)
+        {
+            events.Add(evnt.GetEventName().ToLower(), new UnityEvent());
+        }*/
+
     }
 
     // Update is called once per frame
@@ -35,9 +47,11 @@ public class EventManager : MonoBehaviour
         
     }
 
+
+    /*
     /*
      * Events listeners handling
-     */
+     * /
     public void AddListener(string eventName, UnityAction listener)
     {
         events[eventName].AddListener(listener);
@@ -51,5 +65,5 @@ public class EventManager : MonoBehaviour
     public void Invoke(string eventName)
     {
         events[eventName].Invoke();
-    }
+    }*/
 }
