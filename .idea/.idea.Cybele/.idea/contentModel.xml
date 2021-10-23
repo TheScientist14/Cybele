@@ -6,6 +6,7 @@
     <e p="C:\Users\User\Documents\Cours\GamingCampus\Unity\Projet1\Cybele" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AlertScript.cs" t="Include" />
         <e p="Template" t="Include">
           <e p="Assets" t="Include">
             <e p="packages" t="Include">
@@ -48,6 +49,7 @@
               <e p="ArmyBehaviour.cs" t="Include" />
               <e p="CardBehaviour.cs" t="Include" />
             </e>
+            <e p="Event.cs" t="Include" />
             <e p="EventList.cs" t="Include" />
             <e p="EventManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />

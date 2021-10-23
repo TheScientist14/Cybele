@@ -5,6 +5,7 @@ using UnityEngine;
 public class OnMouseDownScript : MonoBehaviour
 {
     private new Camera camera;
+    public GameObject alert;
 
     void Awake()
     {
@@ -24,6 +25,7 @@ public class OnMouseDownScript : MonoBehaviour
 
     void OnMouseDown()
     {
+        alert.SetActive(false);
         camera.transform.position = gameObject.transform.position + new Vector3(0,0,-2.5f);
         camera.orthographicSize = 0.75f;
     }
