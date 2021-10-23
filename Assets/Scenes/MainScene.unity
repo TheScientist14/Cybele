@@ -621,12 +621,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   deck: {fileID: 2082712503}
+  armyCard: {fileID: 1124008076}
   poi:
-  - {fileID: 363515626}
+  - {fileID: 2079861133}
   - {fileID: 1486381960}
   - {fileID: 1707180566}
   - {fileID: 1787806592}
-  - {fileID: 2079861133}
+  - {fileID: 363515626}
 --- !u!4 &308160143
 Transform:
   m_ObjectHideFlags: 0
@@ -739,6 +740,10 @@ PrefabInstance:
     - target: {fileID: 6284586901112163823, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284586901112163823, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8672647599083081336, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_Color.b
@@ -1087,6 +1092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversionBarText: {fileID: 24264755}
   TimerText: {fileID: 1710300854}
+  armyCard: {fileID: 0}
   slider: {fileID: 52429461}
 --- !u!1 &651790659
 GameObject:

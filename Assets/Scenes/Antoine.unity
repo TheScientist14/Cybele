@@ -621,6 +621,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   deck: {fileID: 2082712503}
+  armyCard: {fileID: 1124008076}
   poi:
   - {fileID: 363515626}
   - {fileID: 1486381960}
@@ -1087,6 +1088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversionBarText: {fileID: 24264755}
   TimerText: {fileID: 1710300854}
+  armyCard: {fileID: 0}
   slider: {fileID: 52429461}
 --- !u!1 &651790659
 GameObject:

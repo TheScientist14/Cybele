@@ -10,20 +10,23 @@ public class GameManager : MonoBehaviour
     public UnityEvent CorruptionModified;
     public UnityEvent CorruptionTempMultiplierReset;
     public GameObject deck;
+    public GameObject armyCard;
 
     private float timer;
     // corruption related variables
     private float corruption;
     private float tempMultiplier; // should not be negative
     private float storyMultiplier; // never reset
-    private bool isGameFinished;
+    private static bool isGameFinished;
     private bool armyActivated;
     private bool posistifEvent;
     private bool nonStopConversion;
-    
+
     public static GameManager instance;
     public GameObject[] poi;
     private int randomPOI;
+    private int positifEventPOI;
+    private static int nbEventAwake;
 
     void Awake()
     {
@@ -39,7 +42,7 @@ public class GameManager : MonoBehaviour
         CorruptionModified = new UnityEvent();
         CorruptionTempMultiplierReset = new UnityEvent();
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +55,8 @@ public class GameManager : MonoBehaviour
         corruption = initCorruption;
         tempMultiplier = 1f;
         storyMultiplier = 1f;
+        nbEventAwake = 0;
+        positifEventPOI = 0;
         StartCoroutine("spawn");
         UIScript.instance.UpdateConversionBar();
         CorruptionModified.AddListener(LimitCorruption);
@@ -62,32 +67,33 @@ public class GameManager : MonoBehaviour
     {
         timer += Time.deltaTime;
         UIScript.instance.UpdateTimer();
-        if ((int) timer > 37)
+        if ((int) timer == 37)
         {
             armyActivated = false;
-        } else if ((int) timer > 72)
+        } else if ((int) timer == 72)
         {
             armyActivated = true;
-        } else if ((int) timer > 108)
+        } else if ((int) timer == 108)
         {
-            posistifEvent = false;
-        } else if ((int) timer > 264)
+            positifEventPOI = 1;
+        } else if ((int) timer >= 264 && (int) timer <= 324)
         {
-            nonStopConversion = true;
+            storyMultiplier = 1;
         } else if ((int) timer == 324)
         {
             isGameFinished = true;
         }
-        
+
     }
 
     void RandomAlert()
     {
-        randomPOI = Random.Range(0, 5);
+        randomPOI = Random.Range(0, poi.Length - positifEventPOI);
         AlertScript alertScript = poi[randomPOI].GetComponent<AlertScript>();
         if (!alertScript.isAlertActivate())
         {
             alertScript.activateAlert();
+            IncreaseNbEvent();
         }
         else
         {
@@ -99,15 +105,15 @@ public class GameManager : MonoBehaviour
     {
         return timer;
     }
-    
+
     IEnumerator spawn()
     {
-        float spawnRate = 0.5f;
+        float spawnRate = 10f;
         while (!isGameFinished)
         {
             RandomAlert();
-            yield return new WaitForSeconds(1 / spawnRate);
-            spawnRate -= 0.05f;
+            yield return new WaitForSeconds(spawnRate);
+            spawnRate -= 0.1f;
         }
     }
 
@@ -178,10 +184,28 @@ public class GameManager : MonoBehaviour
     public void ActiveDeck()
     {
         deck.SetActive(true);
+        if (!armyActivated)
+        {
+            armyCard.SetActive(false);
+        }
+        else
+        {
+            armyCard.SetActive(true);
+        }
     }
 
     public void DeactiveDeck()
     {
         deck.SetActive(false);
+    }
+
+    public void IncreaseNbEvent()
+    {
+        nbEventAwake++;
+    }
+
+    public void RemoveEventAwake()
+    {
+        nbEventAwake--;
     }
 }
