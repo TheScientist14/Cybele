@@ -39,7 +39,7 @@ public class UIScript : MonoBehaviour
 
     public void UpdateConversionBar()
     {
-        slider.value = GameManager.instance.GetCorruption();
+        slider.value = GameManager.instance.GetCorruption();    
         if (GameManager.instance.GetCorruption() == 0)
         {
             conversionBarText.SetText(GameManager.instance.GetCorruption() + "%");
