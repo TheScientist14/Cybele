@@ -17,7 +17,5 @@ public abstract class ActionBehaviour : MonoBehaviour
     }
 
     // should implement the behaviour of the card when it is placed on a point of interest
-    void DoAction()
-    {
-    }
+    public abstract void DoAction();
 }

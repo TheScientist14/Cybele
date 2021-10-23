@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RestrictionEvent : EventBehaviour
+public class MarchandsEvent : EventBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,12 +15,6 @@ public class RestrictionEvent : EventBehaviour
     {
         
     }
-
-    public override void ArmyConsequence()
-    {
-
-    }
-
     public override Criticiality GetEventCriticality()
     {
         return Criticiality.Side;
@@ -28,25 +22,29 @@ public class RestrictionEvent : EventBehaviour
 
     public override string GetEventName()
     {
-        return "Des restrictions sont mises en place";
+        return "Des marchands phrygiens débarquent";
     }
 
     public override bool IsPositive()
     {
-        return true;
+        return false;
     }
 
     public override void PopulationConsequence()
     {
-
     }
 
     public override void SabotageConsequence()
     {
+        GameManager.instance.AddCorruption(5);
     }
 
     public override void SpeechConsequence()
     {
 
+    }
+
+    public override void ArmyConsequence()
+    {
     }
 }

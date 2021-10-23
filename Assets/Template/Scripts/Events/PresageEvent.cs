@@ -44,7 +44,7 @@ public class PresageEvent : EventBehaviour
 
     public override void SabotageConsequence()
     {
-        corruptionDelta *= 2;
+        GameManager.instance.AddCorruption(5f);
     }
 
     public override void SpeechConsequence()

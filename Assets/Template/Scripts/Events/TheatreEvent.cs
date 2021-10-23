@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RestrictionEvent : EventBehaviour
+public class TheatreEvent : EventBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class RestrictionEvent : EventBehaviour
 
     public override void ArmyConsequence()
     {
-
+        GameManager.instance.AddCorruption(2f);
     }
 
     public override Criticiality GetEventCriticality()
@@ -28,21 +28,22 @@ public class RestrictionEvent : EventBehaviour
 
     public override string GetEventName()
     {
-        return "Des restrictions sont mises en place";
+        return "Pièces de théâtre des Mégalésies";
     }
 
     public override bool IsPositive()
     {
-        return true;
+        return false;
     }
 
     public override void PopulationConsequence()
     {
-
+        GameManager.instance.AddCorruption(10);
     }
 
     public override void SabotageConsequence()
     {
+        GameManager.instance.AddCorruption(5);
     }
 
     public override void SpeechConsequence()

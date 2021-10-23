@@ -16,7 +16,7 @@ public class ArmyBehaviour : ActionBehaviour
         
     }
 
-    void DoAction()
+    public override void DoAction()
     {
         
     }
