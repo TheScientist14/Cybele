@@ -2,27 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(ActionBehaviour))]
+[RequireComponent(typeof(Collider))]
 public class CardBehaviour : MonoBehaviour
 {
-    private Camera cam;
-    private bool isDragged;
-    //private Vector2 oldPos;
+    private ActionBehaviour cardAction;
+
+    void Awake()
+    {
+        cardAction = gameObject.GetComponent<ActionBehaviour>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        cam = Camera.main;
-        isDragged = false;
+        CardSelection.instance.AddListener(MoveIfSelected);
     }
 
     void OnMouseDown()
     {
-        //isDragged = true;
-        //oldPos = Input.mousePosition;
+        CardSelection.instance.SelectAction(cardAction);
     }
 
-    void OnMouseDrag()
+    public void MoveIfSelected()
     {
-        //transform.position = Input.mousePosition;
+        if(CardSelection.instance.GetSelectedAction() == this)
+        {
+            transform.position += 10*transform.up;
+        }
+        else
+        {
+            // ?
+        }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionBehaviour : MonoBehaviour
+public abstract class ActionBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,8 +16,8 @@ public class ActionBehaviour : MonoBehaviour
         
     }
 
+    // should implement the behaviour of the card when it is placed on a point of interest
     void DoAction()
     {
-
     }
 }

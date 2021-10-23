@@ -21,6 +21,10 @@ public class UIScript : MonoBehaviour
         {
             instance = this;
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -31,12 +35,12 @@ public class UIScript : MonoBehaviour
 
     public void UpdateConversionBar()
     {
-        slider.normalizedValue = (int) GameManager.corruption;
-        conversionBarText.SetText(GameManager.corruption + "%");
+        slider.normalizedValue = (int) GameManager.instance.GetCorruption();
+        conversionBarText.SetText(GameManager.instance.GetCorruption() + "%");
     }
 
     public void UpdateTimer()
     {
-        TimerText.SetText("Timer :" + (int) GameManager.timer);
+        TimerText.SetText("Timer :" + (int) GameManager.instance.GetTime());
     }
 }

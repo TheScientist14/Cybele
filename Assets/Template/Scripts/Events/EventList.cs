@@ -6,5 +6,5 @@ using UnityEngine;
 public class EventList : ScriptableObject
 {
     // array containing name of every event
-    public string[] eventsName;
+    public EventBehaviour[] events;
 }

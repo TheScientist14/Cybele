@@ -18,6 +18,6 @@ public class ArmyBehaviour : ActionBehaviour
 
     void DoAction()
     {
-
+        
     }
 }
