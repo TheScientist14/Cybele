@@ -39,11 +39,13 @@ public class CardSelection : MonoBehaviour
     public void ClearSelection()
     {
         selectedCard = null;
+        SelectionHasChanged.Invoke();
     }
 
     public void SelectAction(ActionBehaviour card)
     {
         selectedCard = card;
+        SelectionHasChanged.Invoke();
     }
 
     public ActionBehaviour GetSelectedAction()

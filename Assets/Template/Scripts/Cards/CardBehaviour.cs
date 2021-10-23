@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(ActionBehaviour))]
-[RequireComponent(typeof(Collider))]
 public class CardBehaviour : MonoBehaviour
 {
     private ActionBehaviour cardAction;
+    private Vector3 standardScale;
 
     void Awake()
     {
@@ -17,25 +17,27 @@ public class CardBehaviour : MonoBehaviour
     void Start()
     {
         CardSelection.instance.AddListener(HighlightIfSelected);
+        standardScale = transform.localScale;
     }
 
-    void OnMouseDown()
+    void Update()
     {
-        if (EventManager.instance.GetSelectedEvent())
-        {
-            CardSelection.instance.SelectAction(cardAction);
-        }
+    }
+
+    public void Click()
+    {
+        CardSelection.instance.SelectAction(cardAction);
     }
 
     public void HighlightIfSelected()
     {
-        if(CardSelection.instance.GetSelectedAction() == this)
+        if(CardSelection.instance.GetSelectedAction() == cardAction)
         {
-            transform.position += 10*transform.up;
+            transform.localScale = standardScale*1.5f;
         }
         else
         {
-            // ?
+            transform.localScale = standardScale;
         }
     }
 }

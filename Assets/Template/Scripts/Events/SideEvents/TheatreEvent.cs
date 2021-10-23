@@ -11,7 +11,7 @@ public class TheatreEvent : EventBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    new void Update()
     {
         
         base.Update();

@@ -11,7 +11,7 @@ public class MarchandsEvent : EventBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    new void Update()
     {
         base.Update();
     }
@@ -36,7 +36,7 @@ public class MarchandsEvent : EventBehaviour
 
     public override void SabotageConsequence()
     {
-        GameManager.instance.AddCorruption(5);
+        GameManager.instance.AddMultipliedCorruption(5);
     }
 
     public override void SpeechConsequence()

@@ -8,12 +8,14 @@ public class GameManager : MonoBehaviour
     public float initCorruption;
 
     public UnityEvent CorruptionModified;
+    public UnityEvent CorruptionTempMultiplierReset;
     public GameObject deck;
 
     private float timer;
     // corruption related variables
     private float corruption;
-    private float tempMultiplier; // should not be negative
+    private float tempPosMultiplier; // should not be negative
+    private float tempNegMultiplier; // should not be negative
     private float storyMultiplier; // never reset
     private bool isGameFinished;
     private bool armyActivated;
@@ -35,7 +37,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        CorruptionModified = new UnityEvent();
+        CorruptionTempMultiplierReset = new UnityEvent();
     }
     
     // Start is called before the first frame update
@@ -52,6 +55,7 @@ public class GameManager : MonoBehaviour
         storyMultiplier = 0f;
         StartCoroutine("spawn");
         UIScript.instance.UpdateConversionBar();
+        CorruptionModified.AddListener(LimitCorruption);
     }
 
     // Update is called once per frame
@@ -81,9 +85,10 @@ public class GameManager : MonoBehaviour
     void RandomAlert()
     {
         randomPOI = Random.Range(0, 5);
-        if (!poi[randomPOI].GetComponent<AlertScript>().isAlertActivate())
+        AlertScript alertScript = poi[randomPOI].GetComponent<AlertScript>();
+        if (!alertScript.isAlertActivate())
         {
-            poi[randomPOI].GetComponent<AlertScript>().activateAlert();
+            alertScript.activateAlert();
         }
         else
         {
@@ -115,8 +120,14 @@ public class GameManager : MonoBehaviour
         return corruption;
     }
 
-    // reset multiplier if not the same action
-    public void AddCorruption(float newCorruption)
+    public void AddPassiveCorruption(float corruptionDelta)
+    {
+        corruption += corruptionDelta;
+        CorruptionModified.Invoke();
+    }
+
+    // reset multiplier
+    public void AddMultipliedCorruption(float newCorruption)
     {
         float multiplier = GetTotalCorruptionMultiplier();
         if (newCorruption > 0)
@@ -127,15 +138,25 @@ public class GameManager : MonoBehaviour
         {
             if (multiplier != 0)
             {
-                corruption += newCorruption / multiplier;
+                corruption += newCorruption;
             }
         }
+        SetCorruptionTempMultiplier(0);
         CorruptionModified.Invoke();
+        CorruptionTempMultiplierReset.Invoke();
+    }
+
+    void LimitCorruption()
+    {
+        if(corruption > 100)
+        {
+            corruption = 100;
+        }
     }
 
     public float GetTotalCorruptionMultiplier()
     {
-        return 1 + tempMultiplier + storyMultiplier;
+        return tempMultiplier + storyMultiplier;
     }
 
     public float GetCorruptionTempMultiplier()
