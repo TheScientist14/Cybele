@@ -5,8 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(ActionBehaviour))]
 public class CardBehaviour : MonoBehaviour
 {
+    public GameObject confirmationGUITemplate;
+
     private ActionBehaviour cardAction;
     private Vector3 standardScale;
+    private GameObject confirmationGUI;
 
     void Awake()
     {
@@ -18,6 +21,8 @@ public class CardBehaviour : MonoBehaviour
     {
         CardSelection.instance.AddListener(HighlightIfSelected);
         standardScale = transform.localScale;
+        confirmationGUI = Instantiate(confirmationGUITemplate, transform);
+        confirmationGUI.SetActive(false);
     }
 
     void Update()
@@ -34,10 +39,12 @@ public class CardBehaviour : MonoBehaviour
         if(CardSelection.instance.GetSelectedAction() == cardAction)
         {
             transform.localScale = standardScale*1.5f;
+            confirmationGUI.SetActive(true);
         }
         else
         {
             transform.localScale = standardScale;
+            confirmationGUI.SetActive(false);
         }
     }
 }

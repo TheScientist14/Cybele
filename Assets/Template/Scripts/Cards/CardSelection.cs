@@ -40,6 +40,7 @@ public class CardSelection : MonoBehaviour
     {
         selectedCard = null;
         SelectionHasChanged.Invoke();
+        Debug.Log("cleared");
     }
 
     public void SelectAction(ActionBehaviour card)

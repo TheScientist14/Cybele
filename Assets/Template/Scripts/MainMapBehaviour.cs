@@ -28,6 +28,7 @@ public class MainMapBehaviour : MonoBehaviour
             camera.transform.position = cameraPositionDefault;
             camera.orthographicSize = 5f;
             GameManager.instance.DeactiveDeck();
+            EventManager.instance.SelectEvent(null);
         }
     }
 }

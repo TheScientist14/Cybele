@@ -4,13 +4,12 @@ using UnityEngine;
 
 public abstract class ActionBehaviour : MonoBehaviour
 {
-    protected string lastAction;
+    protected string lastAction = "";
     protected static string id;
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame

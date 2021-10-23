@@ -19,13 +19,8 @@ public class EventManager : MonoBehaviour
     void Awake()
     {
         EventHasBeenSelected = new UnityEvent();
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
         // Singleton
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -33,6 +28,12 @@ public class EventManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
