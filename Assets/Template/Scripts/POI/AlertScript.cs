@@ -21,4 +21,9 @@ public class AlertScript : MonoBehaviour
     {
         alert.SetActive(true);
     }
+
+    public bool isAlertActivate()
+    {
+        return alert.activeInHierarchy;
+    }
 }

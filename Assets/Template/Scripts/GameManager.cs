@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     private float corruption;
     private float tempMultiplier; // should not be negative
     private float storyMultiplier; // never reset
+    private bool isGameFinished;
 
     public static GameManager instance;
     public GameObject[] poi;
@@ -32,14 +33,12 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        randomPOI = Random.Range(0, 5);
-        
-        Debug.Log("random : " + randomPOI);
-        
+        isGameFinished = false;
         timer = 40f;
         corruption = initCorruption;
         tempMultiplier = 0f;
         storyMultiplier = 0f;
+        StartCoroutine("spawn");
         UIScript.instance.UpdateConversionBar();
     }
 
@@ -48,21 +47,39 @@ public class GameManager : MonoBehaviour
     {
         timer -= Time.deltaTime;
         UIScript.instance.UpdateTimer();
-        if ((int) timer == 35)
+        if ((int) timer == 0)
         {
-            RandomAlert();
+            isGameFinished = true;
         }
     }
 
     void RandomAlert()
     {
-        Debug.Log("RandomAlert methode");
-        poi[randomPOI].GetComponent<AlertScript>().activateAlert();
+        randomPOI = Random.Range(0, 5);
+        if (!poi[randomPOI].GetComponent<AlertScript>().isAlertActivate())
+        {
+            poi[randomPOI].GetComponent<AlertScript>().activateAlert();
+        }
+        else
+        {
+            RandomAlert();
+        }
     }
 
     public float GetTime()
     {
         return timer;
+    }
+    
+    IEnumerator spawn()
+    {
+        float spawnRate = 0.5f;
+        while (!isGameFinished)
+        {
+            RandomAlert();
+            yield return new WaitForSeconds(1 / spawnRate);
+            spawnRate -= 0.02f;
+        }
     }
 
     /*
