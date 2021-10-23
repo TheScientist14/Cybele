@@ -4,7 +4,8 @@ using UnityEngine;
 
 public abstract class ActionBehaviour : MonoBehaviour
 {
-    protected static string lastAction;
+    protected string lastAction;
+    protected static string id;
 
     // Start is called before the first frame update
     void Start()
@@ -20,4 +21,6 @@ public abstract class ActionBehaviour : MonoBehaviour
 
     // should implement the behaviour of the card when it is placed on a point of interest
     public abstract void DoAction();
+
+    public abstract bool IsActive();
 }

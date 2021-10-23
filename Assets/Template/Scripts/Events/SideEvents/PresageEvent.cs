@@ -12,7 +12,7 @@ public class PresageEvent : EventBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    new void Update()
     {
         
         base.Update();
@@ -45,7 +45,7 @@ public class PresageEvent : EventBehaviour
 
     public override void SabotageConsequence()
     {
-        GameManager.instance.AddCorruption(5f);
+        GameManager.instance.AddMultipliedCorruption(5f);
     }
 
     public override void SpeechConsequence()

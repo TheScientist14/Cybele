@@ -33,18 +33,6 @@ public class EventManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        // init events
-        /*events = new Dictionary<string, UnityEvent>();
-        foreach (EventBehaviour evnt in storyEventList.events)
-        {
-            events.Add(evnt.GetEventName().ToLower(), new UnityEvent());
-        }
-        foreach (EventBehaviour evnt in sideEventList.events)
-        {
-            events.Add(evnt.GetEventName().ToLower(), new UnityEvent());
-        }*/
-
     }
 
     // Update is called once per frame

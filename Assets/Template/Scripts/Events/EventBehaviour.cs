@@ -5,9 +5,10 @@ using UnityEngine;
 public abstract class EventBehaviour : MonoBehaviour
 {
     private float initTime;
-    private float delayStart = 5f;
+    private float delayStart = 3f;
     private float delayEnd = float.MaxValue;
-    protected float corruptionDelta = 5;
+    protected float passiveCorruptionDelta = 0.5f;
+    protected float activeCorruptionDelta = 5f;
 
     public enum Criticiality{
         Side,
@@ -27,7 +28,7 @@ public abstract class EventBehaviour : MonoBehaviour
         {
             if (GameManager.instance.GetTime() < initTime + delayEnd)
             {
-                GameManager.instance.AddCorruption(corruptionDelta*Time.deltaTime);
+                GameManager.instance.AddPassiveCorruption(passiveCorruptionDelta*Time.deltaTime);
             }
             else
             {
@@ -46,4 +47,9 @@ public abstract class EventBehaviour : MonoBehaviour
     public abstract Criticiality GetEventCriticality();
 
     public abstract bool IsPositive();
+
+    public void DoEvent()
+    {
+        GameManager.instance.AddMultipliedCorruption(activeCorruptionDelta);
+    }
 }

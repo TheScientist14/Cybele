@@ -8,19 +8,21 @@ public class GameManager : MonoBehaviour
     public float initCorruption;
 
     public UnityEvent CorruptionModified;
+    public UnityEvent CorruptionTempMultiplierReset;
     public GameObject deck;
     public GameObject armyCard;
 
     private float timer;
     // corruption related variables
     private float corruption;
-    private float tempMultiplier; // should not be negative
+    private float tempPosMultiplier; // should not be negative
+    private float tempNegMultiplier; // should not be negative
     private float storyMultiplier; // never reset
     private static bool isGameFinished;
     private bool armyActivated;
     private bool posistifEvent;
     private bool nonStopConversion;
-    
+
     public static GameManager instance;
     public GameObject[] poi;
     private int randomPOI;
@@ -38,9 +40,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
+        CorruptionModified = new UnityEvent();
+        CorruptionTempMultiplierReset = new UnityEvent();
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +60,7 @@ public class GameManager : MonoBehaviour
         positifEventPOI = 0;
         StartCoroutine("spawn");
         UIScript.instance.UpdateConversionBar();
+        CorruptionModified.AddListener(LimitCorruption);
     }
 
     // Update is called once per frame
@@ -80,23 +84,21 @@ public class GameManager : MonoBehaviour
         {
             isGameFinished = true;
         }
-        
+
     }
 
     void RandomAlert()
     {
-        if (nbEventAwake < poi.Length)
+        randomPOI = Random.Range(0, poi.Length - positifEventPOI);
+        AlertScript alertScript = poi[randomPOI].GetComponent<AlertScript>();
+        if (!alertScript.isAlertActivate())
         {
-            randomPOI = Random.Range(0, poi.Length - positifEventPOI);
-            if (!poi[randomPOI].GetComponent<AlertScript>().isAlertActivate())
-            {
-                poi[randomPOI].GetComponent<AlertScript>().activateAlert();
-                IncreaseNbEvent();
-            }
-            else
-            {
-                RandomAlert();
-            }
+            alertScript.activateAlert();
+            IncreaseNbEvent();
+        }
+        else
+        {
+            RandomAlert();
         }
     }
 
@@ -104,7 +106,7 @@ public class GameManager : MonoBehaviour
     {
         return timer;
     }
-    
+
     IEnumerator spawn()
     {
         float spawnRate = 10f;
@@ -124,8 +126,14 @@ public class GameManager : MonoBehaviour
         return corruption;
     }
 
-    // reset multiplier if not the same action
-    public void AddCorruption(float newCorruption)
+    public void AddPassiveCorruption(float corruptionDelta)
+    {
+        corruption += corruptionDelta;
+        CorruptionModified.Invoke();
+    }
+
+    // reset multiplier
+    public void AddMultipliedCorruption(float newCorruption)
     {
         float multiplier = GetTotalCorruptionMultiplier();
         if (newCorruption > 0)
@@ -136,15 +144,25 @@ public class GameManager : MonoBehaviour
         {
             if (multiplier != 0)
             {
-                corruption += newCorruption / multiplier;
+                corruption += newCorruption;
             }
         }
+        SetCorruptionTempMultiplier(0);
         CorruptionModified.Invoke();
+        CorruptionTempMultiplierReset.Invoke();
+    }
+
+    void LimitCorruption()
+    {
+        if(corruption > 100)
+        {
+            corruption = 100;
+        }
     }
 
     public float GetTotalCorruptionMultiplier()
     {
-        return 1 + tempMultiplier + storyMultiplier;
+        return tempMultiplier + storyMultiplier;
     }
 
     public float GetCorruptionTempMultiplier()
