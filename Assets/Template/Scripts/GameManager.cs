@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     private static int nbEventAwake;
+    private AlertScript alertScript;
 
     void Awake()
     {
@@ -100,16 +102,19 @@ public class GameManager : MonoBehaviour
 
     void RandomAlert()
     {
-        randomPOI = Random.Range(0, poi.Length - positifEventPOI);
-        AlertScript alertScript = poi[randomPOI].GetComponent<AlertScript>();
-        if (!alertScript.isAlertActivate())
+        if (nbEventAwake < poi.Length)
         {
-            alertScript.activateAlert();
-            IncreaseNbEvent();
-        }
-        else
-        {
-            RandomAlert();
+            randomPOI = Random.Range(0, poi.Length - positifEventPOI);
+            alertScript = poi[randomPOI].GetComponent<AlertScript>();
+            if (!alertScript.isAlertActivate())
+            {
+                alertScript.activateAlert();
+                IncreaseNbEvent();
+            }
+            else
+            {
+                RandomAlert();
+            }
         }
     }
 
