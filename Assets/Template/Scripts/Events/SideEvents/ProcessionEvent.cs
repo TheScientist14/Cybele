@@ -12,19 +12,22 @@ public class ProcessionEvent : EventBehaviour
 
     public override void ArmyConsequence()
     {
+        DoEvent();
     }
 
     public override void PopulationConsequence()
     {
+        DoEvent();
     }
 
     public override void SabotageConsequence()
     {
-        GameManager.instance.AddCorruption(5f);
+        DoEvent();
     }
 
     public override void SpeechConsequence()
     {
+        DoEvent();
     }
 
     public override string GetEventName()
@@ -35,11 +38,6 @@ public class ProcessionEvent : EventBehaviour
     public override Criticiality GetEventCriticality()
     {
         return Criticiality.Side;
-    }
-
-    public override bool IsPositive()
-    {
-        return false;
     }
 
     // Update is called once per frame

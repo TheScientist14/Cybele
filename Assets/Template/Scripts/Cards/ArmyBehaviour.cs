@@ -18,15 +18,15 @@ public class ArmyBehaviour : ActionBehaviour
 
     public override void DoAction()
     {
-        if (EventManager.instance.GetSelectedEvent().IsPositive())
-        {
-            GameManager.instance.SetCorruptionTempMultiplier(GameManager.instance.GetCorruptionTempMultiplier() + 1);
-            EventManager.instance.GetSelectedEvent().ArmyConsequence();
-        }
-        //GameManager.instance.SetCorruptionTempMultiplier(GameManager.instance.GetCorruptionTempMultiplier() + 1);
+        EventManager.instance.GetSelectedEvent().ArmyConsequence();
+        GameManager.instance.SetCorruptionTempMultiplier(GameManager.instance.GetCorruptionTempMultiplier() * 2);
         if (lastAction.Equals(id))
         {
             lastAction = id + 2;
+        }
+        else
+        {
+            lastAction = id;
         }
     }
 

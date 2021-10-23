@@ -25,26 +25,23 @@ public class MarchandsEvent : EventBehaviour
         return "Des marchands phrygiens d�barquent";
     }
 
-    public override bool IsPositive()
-    {
-        return false;
-    }
-
     public override void PopulationConsequence()
     {
+        DoEvent();
     }
 
     public override void SabotageConsequence()
     {
-        GameManager.instance.AddMultipliedCorruption(5);
+        DoEvent();
     }
 
     public override void SpeechConsequence()
     {
-
+        DoEvent();
     }
 
     public override void ArmyConsequence()
     {
+        DoEvent();
     }
 }

@@ -46,7 +46,10 @@ public abstract class EventBehaviour : MonoBehaviour
 
     public abstract Criticiality GetEventCriticality();
 
-    public abstract bool IsPositive();
+    public bool IsPositive()
+    {
+        return (activeCorruptionDelta < 0);
+    }
 
     public void DoEvent()
     {

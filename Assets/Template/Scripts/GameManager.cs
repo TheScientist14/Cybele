@@ -14,8 +14,7 @@ public class GameManager : MonoBehaviour
     private float timer;
     // corruption related variables
     private float corruption;
-    private float tempPosMultiplier; // should not be negative
-    private float tempNegMultiplier; // should not be negative
+    private float tempMultiplier; // should not be negative
     private float storyMultiplier; // never reset
     private bool isGameFinished;
     private bool armyActivated;
@@ -51,8 +50,8 @@ public class GameManager : MonoBehaviour
         nonStopConversion = false;
         timer = 0f;
         corruption = initCorruption;
-        tempMultiplier = 0f;
-        storyMultiplier = 0f;
+        tempMultiplier = 1f;
+        storyMultiplier = 1f;
         StartCoroutine("spawn");
         UIScript.instance.UpdateConversionBar();
         CorruptionModified.AddListener(LimitCorruption);
@@ -127,23 +126,20 @@ public class GameManager : MonoBehaviour
     }
 
     // reset multiplier
-    public void AddMultipliedCorruption(float newCorruption)
+    public void AddMultipliedCorruption(float corruptionAdded)
     {
-        float multiplier = GetTotalCorruptionMultiplier();
-        if (newCorruption > 0)
+        float corruptionDelta = GetTotalCorruptionMultiplier() * corruptionAdded;
+        if (corruptionDelta > 0)
         {
-            corruption += newCorruption * multiplier;
+            corruption += corruptionDelta;
+            SetCorruptionTempMultiplier(1);
+            CorruptionTempMultiplierReset.Invoke();
         }
         else
         {
-            if (multiplier != 0)
-            {
-                corruption += newCorruption;
-            }
+            corruption += corruptionAdded;
         }
-        SetCorruptionTempMultiplier(0);
         CorruptionModified.Invoke();
-        CorruptionTempMultiplierReset.Invoke();
     }
 
     void LimitCorruption()
@@ -156,7 +152,7 @@ public class GameManager : MonoBehaviour
 
     public float GetTotalCorruptionMultiplier()
     {
-        return tempMultiplier + storyMultiplier;
+        return tempMultiplier * storyMultiplier;
     }
 
     public float GetCorruptionTempMultiplier()

@@ -20,11 +20,11 @@ public class PeupleBehaviour : ActionBehaviour
     {
         if (EventManager.instance.GetSelectedEvent().IsPositive())
         {
-            GameManager.instance.SetCorruptionTempMultiplier(1 / (2 * GameManager.instance.GetCorruptionTempMultiplier()));
+            GameManager.instance.SetCorruptionTempMultiplier(GameManager.instance.GetCorruptionTempMultiplier()/2);
         }
         else
         {
-            GameManager.instance.SetCorruptionTempMultiplier(GameManager.instance.GetCorruptionTempMultiplier());
+            GameManager.instance.SetCorruptionTempMultiplier(GameManager.instance.GetCorruptionTempMultiplier()*2);
         }
         EventManager.instance.GetSelectedEvent().PopulationConsequence();
         lastAction = id;
