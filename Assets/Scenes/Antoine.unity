@@ -293,6 +293,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyEventList: {fileID: 11400000, guid: c6ae0b67400e14e4f9e05e721384aca4, type: 2}
   sideEventList: {fileID: 11400000, guid: 005fba317fca9eb4c8817bfa379bc000, type: 2}
+  EventHasBeenSelected:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &45192707
 Transform:
   m_ObjectHideFlags: 0
@@ -391,8 +394,8 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 30
+  m_WholeNumbers: 0
+  m_Value: 18
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -613,7 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f94d14346b3ae2478397e294291c2c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initCorruption: 0
+  initCorruption: 0.38
   CorruptionModified:
     m_PersistentCalls:
       m_Calls: []

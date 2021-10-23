@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab21d6b9-a453-4588-8833-d9a3061a9519" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cybele/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cybele/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cybele/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cybele/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Antoine.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Antoine.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Template/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Template/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Template/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Template/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Template/Scripts/MainMapBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Template/Scripts/MainMapBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Template/Scripts/POI/OnMouseDownScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Template/Scripts/POI/OnMouseDownScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Template/Scripts/UIScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Template/Scripts/UIScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +47,7 @@
         <option value="$PROJECT_DIR$/Assets/Template/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Template/Scripts/MainMapBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Template/Scripts/POI/OnMouseDownScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/UIScript.cs" />
       </list>
     </option>
   </component>
@@ -78,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1634975582133</updated>
-      <workItem from="1634975585565" duration="5971000" />
+      <workItem from="1634975585565" duration="6518000" />
     </task>
     <servers />
   </component>
