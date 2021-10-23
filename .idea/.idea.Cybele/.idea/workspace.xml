@@ -8,10 +8,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/MainMapBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TowerDefense/Assets/Template/Scripts/UI/TextManagement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UIScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/EventList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/POIBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/OnMouseDownScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/MainMapBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/POI/OnMouseDownScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TowerDefense/Assets/Template/Scripts/Game/GameManagement.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -20,6 +24,11 @@
         <option value="$PROJECT_DIR$/Assets/MainMapBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Template/Scripts/OnMouseDownScript.cs" />
         <option value="$PROJECT_DIR$/Assets/POIBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/MainMapBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/EventManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/POI/OnMouseDownScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/UIScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/GameManager.cs" />
       </list>
     </option>
   </component>

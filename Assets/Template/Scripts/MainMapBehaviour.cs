@@ -23,7 +23,7 @@ public class MainMapBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("space"))
+        if (Input.GetKey(","))
         {
             camera.transform.position = cameraPositionDefault;
             camera.orthographicSize = 5f;
