@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,8 +10,7 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent CorruptionModified;
     public UnityEvent CorruptionTempMultiplierReset;
-    public GameObject deck;
-    public GameObject armyCard;
+    public GameObject[] cards;
 
     private float timer;
     // corruption related variables
@@ -22,10 +22,12 @@ public class GameManager : MonoBehaviour
     private bool posistifEvent;
     private bool nonStopConversion;
 
-    public static GameManager instance;
     public GameObject[] poi;
     private int randomPOI;
     private int positifEventPOI;
+    private List<ActionBehaviour> actionsBehaviour;
+
+    public static GameManager instance;
     private static int nbEventAwake;
 
     void Awake()
@@ -34,6 +36,7 @@ public class GameManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
+            Debug.Log("set");
         }
         else
         {
@@ -41,12 +44,20 @@ public class GameManager : MonoBehaviour
         }
         CorruptionModified = new UnityEvent();
         CorruptionTempMultiplierReset = new UnityEvent();
+        actionsBehaviour = new List<ActionBehaviour>();
+        foreach (GameObject card in cards)
+        {
+            ActionBehaviour cardBehaviour = card.GetComponent<ActionBehaviour>();
+            if(cardBehaviour != null)
+            {
+                actionsBehaviour.Add(cardBehaviour);
+            }
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        deck.SetActive(false);
         isGameFinished = false;
         armyActivated = true;
         posistifEvent = true;
@@ -57,6 +68,7 @@ public class GameManager : MonoBehaviour
         storyMultiplier = 1f;
         nbEventAwake = 0;
         positifEventPOI = 0;
+        DeactiveDeck();
         StartCoroutine("spawn");
         UIScript.instance.UpdateConversionBar();
         CorruptionModified.AddListener(LimitCorruption);
@@ -184,12 +196,18 @@ public class GameManager : MonoBehaviour
 
     public void ActiveDeck()
     {
-        deck.SetActive(true);
+        foreach (ActionBehaviour card in actionsBehaviour)
+        {
+            card.gameObject.SetActive(card.IsActive());
+        }
     }
 
     public void DeactiveDeck()
     {
-        deck.SetActive(false);
+        foreach (ActionBehaviour card in actionsBehaviour)
+        {
+            card.gameObject.SetActive(false);
+        }
     }
 
     public void IncreaseNbEvent()
@@ -200,5 +218,10 @@ public class GameManager : MonoBehaviour
     public void RemoveEventAwake()
     {
         nbEventAwake--;
+    }
+
+    public bool IsArmyActivated()
+    {
+        return armyActivated;
     }
 }

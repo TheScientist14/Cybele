@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class ConfirmationGUIBehaviour : MonoBehaviour
 {
+    private CameraBehaviour cam;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        cam = Camera.main.GetComponent<CameraBehaviour>();
     }
 
     // Update is called once per frame
@@ -21,7 +23,7 @@ public class ConfirmationGUIBehaviour : MonoBehaviour
         CardSelection.instance.GetSelectedAction().DoAction();
         EventManager.instance.SelectEvent(null);
         CardSelection.instance.ClearSelection();
-        // reset Camera
+        cam.Reset();
     }
 
     public void Cancel()

@@ -423,8 +423,11 @@ MonoBehaviour:
   CorruptionTempMultiplierReset:
     m_PersistentCalls:
       m_Calls: []
-  deck: {fileID: 1457689866}
-  armyCard: {fileID: 412861216}
+  cards:
+  - {fileID: 412861216}
+  - {fileID: 1150298481}
+  - {fileID: 1012909530}
+  - {fileID: 1726463893}
   poi:
   - {fileID: 510374265}
   - {fileID: 1837969623}
@@ -944,6 +947,9 @@ MonoBehaviour:
   storyEventList: {fileID: 11400000, guid: c6ae0b67400e14e4f9e05e721384aca4, type: 2}
   sideEventList: {fileID: 11400000, guid: 005fba317fca9eb4c8817bfa379bc000, type: 2}
   EventHasBeenSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  EventSelectionCleared:
     m_PersistentCalls:
       m_Calls: []
 --- !u!4 &734441993
@@ -1496,7 +1502,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097228299}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11fca04c72507744d848047f5426ff7a, type: 3}
   m_Name: 
@@ -1902,6 +1908,7 @@ GameObject:
   - component: {fileID: 1407655872}
   - component: {fileID: 1407655871}
   - component: {fileID: 1407655870}
+  - component: {fileID: 1407655873}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1974,6 +1981,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1407655873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407655869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6fb23dd7cda57b40bcc41ded644e09f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1457689866
 GameObject:
   m_ObjectHideFlags: 0

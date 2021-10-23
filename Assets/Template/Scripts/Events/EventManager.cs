@@ -10,15 +10,17 @@ public class EventManager : MonoBehaviour
 
     private EventBehaviour selectedEvent;
     public UnityEvent EventHasBeenSelected;
+    public UnityEvent EventSelectionCleared;
 
-    //private IDictionary<string, EventBehaviour> events;
-    //private EventBehaviour[] events;
+    private Camera cam;
+    private CameraBehaviour camBehaviour;
 
     public static EventManager instance;
 
     void Awake()
     {
         EventHasBeenSelected = new UnityEvent();
+        EventSelectionCleared = new UnityEvent();
         // Singleton
         if (instance == null)
         {
@@ -33,7 +35,8 @@ public class EventManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        cam = Camera.main;
+        camBehaviour = cam.GetComponent<CameraBehaviour>();
     }
 
     // Update is called once per frame
@@ -55,7 +58,9 @@ public class EventManager : MonoBehaviour
 
     public void ClearSelection()
     {
-
+        selectedEvent = null;
+        CardSelection.instance.ClearSelection();
+        EventSelectionCleared.Invoke();
     }
 
     /*
