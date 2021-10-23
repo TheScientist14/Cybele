@@ -297,8 +297,8 @@ MonoBehaviour:
   CorruptionModified:
     m_PersistentCalls:
       m_Calls: []
-  storyEventList: {fileID: 0}
-  sideEventList: {fileID: 0}
+  storyEventList: {fileID: 11400000, guid: c6ae0b67400e14e4f9e05e721384aca4, type: 2}
+  sideEventList: {fileID: 11400000, guid: 005fba317fca9eb4c8817bfa379bc000, type: 2}
   initCorruption: 0
 --- !u!4 &45192707
 Transform:
