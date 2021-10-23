@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Timers;
@@ -38,8 +39,15 @@ public class UIScript : MonoBehaviour
 
     public void UpdateConversionBar()
     {
-        slider.value = (int) GameManager.instance.GetCorruption();
-        conversionBarText.SetText(GameManager.instance.GetCorruption() + "%");
+        slider.value = GameManager.instance.GetCorruption();
+        if (GameManager.instance.GetCorruption() == 0)
+        {
+            conversionBarText.SetText(GameManager.instance.GetCorruption() + "%");
+        }
+        else
+        {
+            conversionBarText.SetText(GameManager.instance.GetCorruption().ToString("0.00") + "%");
+        }
     }
 
     public void UpdateTimer()

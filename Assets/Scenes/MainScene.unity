@@ -320,6 +320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 52429460}
   - component: {fileID: 52429461}
+  - component: {fileID: 52429462}
   m_Layer: 5
   m_Name: ConversionBar
   m_TagString: Untagged
@@ -367,7 +368,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -387,7 +388,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 735036082}
   m_HandleRect: {fileID: 0}
@@ -395,10 +396,29 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 18
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &52429462
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52429459}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 819811057a16c5f4ab0d83545e50bbde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &116783717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -618,6 +638,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initCorruption: 0
   CorruptionModified:
+    m_PersistentCalls:
+      m_Calls: []
+  CorruptionTempMultiplierReset:
     m_PersistentCalls:
       m_Calls: []
   deck: {fileID: 2082712503}
@@ -873,16 +896,24 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8672647599083081336, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672647599083081336, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d07b8b4dd73e91d46ac08b0776c5e2d0, type: 3}
+    - target: {fileID: 8672647599083081336, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_Color.b
-      value: 0.43164828
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8672647599083081336, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_Color.g
-      value: 0.8738223
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8672647599083081336, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_Color.r
-      value: 0.9433962
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
@@ -1633,12 +1664,20 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8672647599083081336, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672647599083081336, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 40993f2be4ac76d459df5ff49161c10d, type: 3}
+    - target: {fileID: 8672647599083081336, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_Color.b
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8672647599083081336, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_Color.g
-      value: 0.2724911
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8672647599083081336, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_Color.r

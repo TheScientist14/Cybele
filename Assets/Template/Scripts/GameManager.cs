@@ -108,6 +108,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator spawn()
     {
+        yield return new WaitForSeconds(3);
         float spawnRate = 10f;
         while (!isGameFinished)
         {
