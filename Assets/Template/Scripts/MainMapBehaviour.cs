@@ -8,7 +8,6 @@ public class MainMapBehaviour : MonoBehaviour
 
     private new Camera camera;
     private Vector3 cameraPositionDefault;
-    public GameObject deck;
 
     void Awake()
     {
