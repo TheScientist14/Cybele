@@ -68,6 +68,6 @@ public class CardBehaviour : MonoBehaviour
 
     public void PlaySound()
     {
-        cardSound;
+        //cardSound;
     }
 }

@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
     public GameObject[] cards;
     public GameObject dialogue;
 
+    public Dialogue Germanicus;
+    public Dialogue Capri;
+    public Dialogue Caligula;
+    public Dialogue reached50;
+
     private float timer;
     // corruption related variables
     private float corruption;
@@ -31,6 +36,8 @@ public class GameManager : MonoBehaviour
     private bool isRunning;
     private bool isTuto;
     private bool armyActivated;
+    private Dialogue currentDialogue;
+    private bool hasCorruptionReached50 = false;
 
     public GameObject[] poi;
     private int randomPOI;
@@ -111,6 +118,10 @@ public class GameManager : MonoBehaviour
                 {
                     armyActivated = false;
                     UpdateDeckEvent.Invoke();
+                    PauseGame();
+                    TextManager.instance.NextTextEvent.AddListener(DisplayEvent);
+                    currentDialogue = Germanicus;
+                    TextManager.instance.SetText(currentDialogue);
                 }
             } else if ((int) timer == 72)
             {
@@ -122,18 +133,40 @@ public class GameManager : MonoBehaviour
             } else if ((int) timer == 108)
             {
                 positifEventPOI = 1;
+                PauseGame();
+                TextManager.instance.NextTextEvent.AddListener(DisplayEvent);
+                currentDialogue = Capri;
+                TextManager.instance.SetText(currentDialogue);
             } else if ((int) timer >= 264 && (int) timer <= 324)
             {
                 if(storyMultiplier == 1)
                 {
                     storyMultiplier = 2;
                     UpdateDeckEvent.Invoke();
+                    PauseGame();
+                    TextManager.instance.NextTextEvent.AddListener(DisplayEvent);
+                    currentDialogue = Caligula;
+                    TextManager.instance.SetText(currentDialogue);
                 }
             } else if ((int) timer == 324)
             {
                 IsGameFinished.Invoke();
                 isGameFinished = true;
             }
+        }
+    }
+
+    private void DisplayEvent()
+    {
+        if(currentDialogue.nextText != null)
+        {
+            currentDialogue = currentDialogue.nextText;
+            TextManager.instance.SetText(currentDialogue);
+        }
+        else
+        {
+            ResumeGame();
+            TextManager.instance.NextTextEvent.RemoveListener(DisplayEvent);
         }
     }
 
@@ -199,6 +232,10 @@ public class GameManager : MonoBehaviour
     {
         corruption += corruptionDelta;
         CorruptionModified.Invoke();
+        if (!hasCorruptionReached50 && corruption > 50)
+        {
+            ShowCorruption50Dialog();
+        }
     }
 
     // reset multiplier
@@ -210,12 +247,24 @@ public class GameManager : MonoBehaviour
             corruption += corruptionDelta;
             SetCorruptionTempMultiplier(1);
             CorruptionTempMultiplierReset.Invoke();
+            if(!hasCorruptionReached50 && corruption > 50)
+            {
+                ShowCorruption50Dialog();
+            }
         }
         else
         {
             corruption += corruptionAdded;
         }
         CorruptionModified.Invoke();
+    }
+
+    private void ShowCorruption50Dialog()
+    {
+        PauseGame();
+        TextManager.instance.NextTextEvent.AddListener(DisplayEvent);
+        currentDialogue = reached50;
+        TextManager.instance.SetText(currentDialogue);
     }
 
     void LimitCorruption()
