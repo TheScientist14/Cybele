@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ArmyBehaviour : ActionBehaviour
 {
+    public void PlaySound()
+    {
+        GetComponent<AudioSource>().Play();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +22,7 @@ public class ArmyBehaviour : ActionBehaviour
 
     public override void DoAction()
     {
+        PlaySound();
         EventManager.instance.GetSelectedEvent().ArmyConsequence();
         GameManager.instance.SetCorruptionTempMultiplier(GameManager.instance.GetCorruptionTempMultiplier() * 2);
         if (lastAction.Equals(id))

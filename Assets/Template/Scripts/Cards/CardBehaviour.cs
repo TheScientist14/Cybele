@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class CardBehaviour : MonoBehaviour
 {
     public GameObject confirmationGUITemplate;
-    public AudioClip cardSound;
 
     private ActionBehaviour cardAction;
     private Vector3 standardScale;
