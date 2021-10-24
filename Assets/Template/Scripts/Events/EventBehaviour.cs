@@ -15,9 +15,6 @@ public abstract class EventBehaviour : MonoBehaviour
     public Dialogue dialoguePeuple;
     public Dialogue dialogueSabotageSuccess;
     public Dialogue dialogueSabotageFail;
-    public GameObject PanelDialogue;
-    public GameObject Tybere;
-    public GameObject Phrygien;
     public enum Criticiality{
         Side,
         Main
@@ -48,20 +45,20 @@ public abstract class EventBehaviour : MonoBehaviour
     public void ArmyConsequence()
     {
         DoEvent();
-        PanelDialogue.SetActive(true);
+        TextManager.instance.gameObject.SetActive(true);
         ChangeText(dialogueArmy.text);
     }
 
     public void SpeechConsequence()
     {
         DoEvent();
-        PanelDialogue.SetActive(true);
+        TextManager.instance.gameObject.SetActive(true);
         ChangeText(dialogueSpeech.text);
     }
 
     public void SabotageConsequence(bool success)
     {
-        PanelDialogue.SetActive(true);
+        TextManager.instance.gameObject.SetActive(true);
         if (success)
         {
             ChangeText(dialogueSabotageSuccess.text);
@@ -95,9 +92,7 @@ public abstract class EventBehaviour : MonoBehaviour
 
     public void ChangeText(string dialogue)
     {
-        PanelDialogue.SetActive(true);
-        Tybere.SetActive(false);
-        Phrygien.SetActive(false);
+        TextManager.instance.gameObject.SetActive(true);
         TextManager.instance.textPanel.SetText(dialogue);
     }
 }

@@ -21,8 +21,6 @@ public class GameManager : MonoBehaviour
     public UnityEvent IsGameFinished;
     public GameObject[] cards;
     public GameObject dialogue;
-    public Dialogue text;
-    private bool corruptionSup;
 
     public Dialogue Germanicus;
     public Dialogue Capri;
@@ -91,7 +89,6 @@ public class GameManager : MonoBehaviour
         isRunning = true;
         isTuto = false;
         armyActivated = true;
-        corruptionSup = false;
         timer = 0f;
         corruption = initCorruption;
         tempMultiplier = 1f;
