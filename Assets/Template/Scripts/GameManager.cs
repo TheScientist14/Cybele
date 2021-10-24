@@ -167,7 +167,7 @@ public class GameManager : MonoBehaviour
         else
         {
             ResumeGame();
-            TextManager.instance.gameObject.SetActive(false);
+            dialogue.SetActive(false);
             TextManager.instance.NextTextEvent.RemoveListener(DisplayEvent);
         }
     }
@@ -389,6 +389,7 @@ public class GameManager : MonoBehaviour
 
     public void CloseDialogue()
     {
+        TextManager.instance.NextTextEvent.RemoveListener(GameManager.instance.CloseDialogue);
         dialogue.SetActive(false);
     }
 }

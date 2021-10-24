@@ -93,6 +93,7 @@ public abstract class EventBehaviour : MonoBehaviour
     public void ChangeText(string dialogue)
     {
         TextManager.instance.gameObject.SetActive(true);
+        TextManager.instance.NextTextEvent.AddListener(GameManager.instance.CloseDialogue);
         TextManager.instance.textPanel.SetText(dialogue);
     }
 }
