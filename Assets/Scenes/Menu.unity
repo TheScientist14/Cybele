@@ -157,6 +157,9 @@ MonoBehaviour:
   EventHasBeenSelected:
     m_PersistentCalls:
       m_Calls: []
+  EventSelectionCleared:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &45192707
 Transform:
   m_ObjectHideFlags: 0
@@ -232,10 +235,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initCorruption: 0
+  PauseScreen: {fileID: 0}
+  ResumeButton: {fileID: 0}
+  ExitButton: {fileID: 0}
   CorruptionModified:
     m_PersistentCalls:
       m_Calls: []
-  deck: {fileID: 0}
+  CorruptionTempMultiplierReset:
+    m_PersistentCalls:
+      m_Calls: []
+  UpdateDeckEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  cards: []
   poi:
   - {fileID: 0}
   - {fileID: 0}
@@ -515,7 +527,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 509efafe774dc6e44b65e7430614187d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.85882354}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

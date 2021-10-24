@@ -51,6 +51,6 @@ public class UIScript : MonoBehaviour
 
     public void UpdateTimer()
     {
-        TimerText.SetText("Timer :" + (int) GameManager.instance.GetTime());
+        TimerText.SetText((int) GameManager.instance.GetTime() + "");
     }
 }
