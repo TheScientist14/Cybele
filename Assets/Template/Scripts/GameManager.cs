@@ -19,7 +19,8 @@ public class GameManager : MonoBehaviour
     private float corruption;
     private float tempMultiplier; // should not be negative
     private float storyMultiplier; // never reset
-    private static bool isGameFinished;
+    private bool isGameFinished;
+    private bool isRunning;
     private bool armyActivated;
 
     public GameObject[] poi;
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
     private List<KeyValuePair<ActionBehaviour, CardBehaviour>> actionsBehaviour;
 
     public static GameManager instance;
-    private static int nbEventAwake;
+    private int nbEventAwake;
     private AlertScript alertScript;
     private bool isDeckActive = false;
 
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         isGameFinished = false;
+        isRunning = true;
         armyActivated = true;
         timer = 0f;
         corruption = initCorruption;
@@ -80,37 +82,44 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        UIScript.instance.UpdateTimer();
-        if ((int) timer == 37)
+        if (IsRunning())
         {
-            if (armyActivated)
+            timer += Time.deltaTime;
+            UIScript.instance.UpdateTimer();
+            if ((int) timer == 37)
             {
-                armyActivated = false;
-                UpdateDeckEvent.Invoke();
-            }
-        } else if ((int) timer == 72)
-        {
-            if (!armyActivated)
+                if (armyActivated)
+                {
+                    armyActivated = false;
+                    UpdateDeckEvent.Invoke();
+                }
+            } else if ((int) timer == 72)
             {
-                armyActivated = true;
-                UpdateDeckEvent.Invoke();
-            }
-        } else if ((int) timer == 108)
-        {
-            positifEventPOI = 1;
-        } else if ((int) timer >= 264 && (int) timer <= 324)
-        {
-            if(storyMultiplier == 1)
+                if (!armyActivated)
+                {
+                    armyActivated = true;
+                    UpdateDeckEvent.Invoke();
+                }
+            } else if ((int) timer == 108)
             {
-                storyMultiplier = 2;
-                UpdateDeckEvent.Invoke();
+                positifEventPOI = 1;
+            } else if ((int) timer >= 264 && (int) timer <= 324)
+            {
+                if(storyMultiplier == 1)
+                {
+                    storyMultiplier = 2;
+                    UpdateDeckEvent.Invoke();
+                }
+            } else if ((int) timer == 324)
+            {
+                isGameFinished = true;
             }
-        } else if ((int) timer == 324)
-        {
-            isGameFinished = true;
         }
+    }
 
+    public bool IsRunning()
+    {
+        return !isGameFinished && isRunning;
     }
 
     void RandomAlert()
@@ -140,7 +149,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         float spawnRate = 10f;
-        while (!isGameFinished)
+        while (IsRunning())
         {
             RandomAlert();
             yield return new WaitForSeconds(spawnRate);

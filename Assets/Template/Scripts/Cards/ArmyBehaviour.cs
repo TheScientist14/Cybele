@@ -32,7 +32,6 @@ public class ArmyBehaviour : ActionBehaviour
 
     public override bool IsActive()
     {
-        Debug.Log(lastAction);
         return (!lastAction.Equals(id + "2") && GameManager.instance.IsArmyActivated());
     }
 }
