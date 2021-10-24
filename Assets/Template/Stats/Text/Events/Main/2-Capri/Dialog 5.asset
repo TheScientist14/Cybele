@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
+  m_Name: Dialog 5
+  m_EditorClassIdentifier: 
+  text: "Vraiment, ces d\xE9bats me fatiguent encore plus que vos b\xEAtises. Il
+    est grand temps pour moi de partir \xE0 Capri. Je vais faire mes bagages et g\xE9rer
+    tout \xE7a de loin !"
+  speaker: {fileID: 0}
+  nextText: {fileID: 11400000, guid: f935172b5fb8edd4facf4e41242a9309, type: 2}

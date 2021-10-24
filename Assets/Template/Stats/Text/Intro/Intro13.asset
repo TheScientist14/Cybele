@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
+  m_Name: Intro13
+  m_EditorClassIdentifier: 
+  text: "Bon, \xE7a c\u2019est r\xE9gl\xE9. Esp\xE9rons que ces illumin\xE9s ne causent
+    pas trop de probl\xE8mes\u2026 Surtout que je ne sais pas vraiment si mes solutions
+    vont fonctionner partout exactement de la m\xEAme mani\xE8re..."
+  nextText: {fileID: 0}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
+  m_Name: Dialog 1
+  m_EditorClassIdentifier: 
+  text: "Bon, c\u2019est pas que Germanicus m\u2019emb\xEAte \xE0 \xEAtre aussi populaire
+    aupr\xE8s du peuple, mais \xE7a commence \xE0 bien faire. C\u2019\xE9tait peut-\xEAtre
+    une mauvaise id\xE9e de l\u2019adopter. Maintenant, tout le monde pr\xE9f\xE9rerait
+    que ce soit lui, l\u2019empereur."
+  speaker: {fileID: 0}
+  nextText: {fileID: 11400000, guid: a48cb41bae5545640926bc2ab1115d21, type: 2}

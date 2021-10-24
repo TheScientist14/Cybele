@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
+  m_Name: Dialog 1
+  m_EditorClassIdentifier: 
+  text: "Mourir aussi b\xEAtement, comme \xE7a ?! Et dire que je ne me rappelle m\xEAme
+    pas de mes derniers instants ! Est-ce que je suis mort dans mon sommeil ? Est-ce
+    que ce vaurien de Caligula m\u2019a fait assassiner ?"
+  speaker: {fileID: 0}
+  nextText: {fileID: 11400000, guid: 3bd2cc9c932162e489cd6eb92a9b5302, type: 2}
