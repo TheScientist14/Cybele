@@ -99,6 +99,7 @@ public abstract class EventBehaviour : MonoBehaviour
         PanelDialogue.SetActive(true);
         Tybere.SetActive(false);
         Phrygien.SetActive(false);
+        TextManager.instance.NextTextEvent.AddListener(GameManager.instance.CloseDialogue);
         TextManager.instance.textPanel.SetText(dialogue);
     }
 }
