@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Loin de moi l\u2019id\xE9e de vouloir vous offenser cher empereur, mais
     qu\u2019est-ce que vous avez contre nous, au juste ?"
-  speaker: {fileID: 0}
+  speaker: Le phrygien
   nextText: {fileID: 11400000, guid: e235697e1d7c0be42bbddc05f3a075b0, type: 2}

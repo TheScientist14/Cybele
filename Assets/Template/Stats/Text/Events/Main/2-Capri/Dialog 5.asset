@@ -15,5 +15,5 @@ MonoBehaviour:
   text: "Vraiment, ces d\xE9bats me fatiguent encore plus que vos b\xEAtises. Il
     est grand temps pour moi de partir \xE0 Capri. Je vais faire mes bagages et g\xE9rer
     tout \xE7a de loin !"
-  speaker: {fileID: 0}
+  speaker: "Tib\xE8re"
   nextText: {fileID: 11400000, guid: f935172b5fb8edd4facf4e41242a9309, type: 2}

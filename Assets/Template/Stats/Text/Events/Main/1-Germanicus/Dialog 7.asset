@@ -15,5 +15,5 @@ MonoBehaviour:
   text: "Si vous le vouliez, vous auriez le pouvoir d\u2019aider les citoyens romains
     \xE0 nous accepter pleinement. Ils pourraient m\xEAme participer \xE0 tous nos
     cultes."
-  speaker: {fileID: 0}
+  speaker: Le phrygien
   nextText: {fileID: 11400000, guid: 27f320a1562e7fb4ba89cd1dcf162328, type: 2}

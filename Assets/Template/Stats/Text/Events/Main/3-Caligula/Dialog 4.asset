@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Dialog 4
   m_EditorClassIdentifier: 
   text: "Il est tr\xE8s heureux de votre disparition !"
-  speaker: {fileID: 0}
+  speaker: Le phrygien
   nextText: {fileID: 11400000, guid: b38cbca3e2c460846b15b6455e35a2e1, type: 2}

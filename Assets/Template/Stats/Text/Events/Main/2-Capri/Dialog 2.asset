@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Eh bien partez \xE0 Capri, \xE7a nous fera des vacances aussi ! Peut-\xEAtre
     que vous arr\xEAterez enfin de prendre des mesures contre nous !"
-  speaker: {fileID: 0}
+  speaker: Le phrygien
   nextText: {fileID: 11400000, guid: 5f307a428fb4f124e9f0fd0cbb2ce9cb, type: 2}

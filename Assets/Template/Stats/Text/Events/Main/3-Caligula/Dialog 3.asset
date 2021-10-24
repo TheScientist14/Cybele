@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Dialog 3
   m_EditorClassIdentifier: 
   text: "Et le peuple, qu\u2019en pense-t-il ?"
-  speaker: {fileID: 0}
+  speaker: "Tib\xE8re"
   nextText: {fileID: 11400000, guid: 7b882933238c40540a6f140c535ce2e8, type: 2}

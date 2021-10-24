@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Bon, quels sont les dossiers importants \xE0 g\xE9rer \xE0 Rome en ce moment
     ?"
+  speaker: "Tib\xE8re"
   nextText: {fileID: 11400000, guid: 1c9609a6f7ab34e4591f05237f14a9ea, type: 2}

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Dialog 5
   m_EditorClassIdentifier: 
   text: "Ah ! Les ingrats ! Vous aussi, vous devez \xEAtre bien contents !"
-  speaker: {fileID: 0}
+  speaker: "Tib\xE8re"
   nextText: {fileID: 11400000, guid: e891e9bf62c48e84c877c815e68e0786, type: 2}

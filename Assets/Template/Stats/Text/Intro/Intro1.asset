@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Pfiu, cette s\xE9ance au S\xE9nat \xE9tait interminable ! Tout \xE7a pour
     me nommer empereur\u2026"
+  speaker: "Tib\xE8re"
   nextText: {fileID: 11400000, guid: 656dc43144109c84dae5b164e8f76c30, type: 2}

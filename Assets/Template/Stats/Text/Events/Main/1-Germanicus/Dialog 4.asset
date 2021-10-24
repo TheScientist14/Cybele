@@ -16,5 +16,5 @@ MonoBehaviour:
     \xEAtes compl\xE8tement aveugl\xE9s par votre d\xE9esse. S\xE9rieusement, qui
     va jusqu\u2019\xE0 s\u2019\xE9masculer pour un dieu ? Vous \xEAtes eunuque, vous
     ?"
-  speaker: {fileID: 0}
+  speaker: "Tib\xE8re"
   nextText: {fileID: 11400000, guid: 7881860707520874f93502b2ad73cf8e, type: 2}

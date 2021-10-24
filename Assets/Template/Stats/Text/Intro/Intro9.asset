@@ -15,4 +15,5 @@ MonoBehaviour:
   text: "Ou sinon, je pourrais la jouer plus subtil et essayer de saboter le truc
     de l\u2019int\xE9rieur\u2026 Mais il y a une chance pour que \xE7a ne fonctionne
     pas du tout."
+  speaker: "Tib\xE8re"
   nextText: {fileID: 11400000, guid: 53042fc8f85ac864a811806b811c6934, type: 2}

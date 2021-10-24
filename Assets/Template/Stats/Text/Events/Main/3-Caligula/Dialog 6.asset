@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Pour \xEAtre honn\xEAte : oui. Caligula, au moins, s\u2019int\xE9resse vraiment
     aux cultes \xE9trangers et ne monte pas la population contre nous."
-  speaker: {fileID: 0}
+  speaker: Le phrygien
   nextText: {fileID: 11400000, guid: 63539919fb29ea545b096889a7cc464f, type: 2}

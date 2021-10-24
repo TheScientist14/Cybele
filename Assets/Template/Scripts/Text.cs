@@ -6,6 +6,6 @@ using UnityEngine;
 public class Text : ScriptableObject
 {
     public string text;
-    public GameObject speaker;
+    public string speaker;
     public Text nextText;
 }

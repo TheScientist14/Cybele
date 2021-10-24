@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Il suffit de lire n\u2019importe quel po\xE8te de notre \xE9poque pour voir
     \xE0 quel point vous \xEAtes bizarres."
-  speaker: {fileID: 0}
+  speaker: "Tib\xE8re"
   nextText: {fileID: 11400000, guid: bf5bd5860b068a84184cce1e675f0e67, type: 2}

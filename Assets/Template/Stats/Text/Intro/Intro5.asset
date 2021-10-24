@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Intro5
   m_EditorClassIdentifier: 
   text: "Qu\u2019est-ce que c\u2019est que \xE7a ? Quel vacarme !"
+  speaker: "Tib\xE8re"
   nextText: {fileID: 11400000, guid: 30b90db69815710499d8bb5634acbd60, type: 2}

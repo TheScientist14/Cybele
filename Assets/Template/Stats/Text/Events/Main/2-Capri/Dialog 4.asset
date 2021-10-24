@@ -16,5 +16,5 @@ MonoBehaviour:
     tout \xE7a. D\u2019ailleurs, vous ne vous \xEAtes jamais vraiment int\xE9ress\xE9
     \xE0 nos valeurs. Elles ne sont pas si diff\xE9rentes des v\xF4tres\u2026 En
     fait on est juste un culte parmi tant d\u2019autres."
-  speaker: {fileID: 0}
+  speaker: Le phrygien
   nextText: {fileID: 11400000, guid: 86032b489982a184c8d587e657495894, type: 2}

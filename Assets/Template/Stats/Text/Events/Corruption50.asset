@@ -15,5 +15,5 @@ MonoBehaviour:
   text: "Les Romains sont maintenant si convaincus par les rites de cette d\xE9esse
     phrygienne qu\u2019il va devenir impossible de trouver qui que ce soit \xE0 corrompre
     pour saboter le culte de l\u2019int\xE9rieur..."
-  speaker: {fileID: 0}
+  speaker: "Tib\xE8re"
   nextText: {fileID: 0}

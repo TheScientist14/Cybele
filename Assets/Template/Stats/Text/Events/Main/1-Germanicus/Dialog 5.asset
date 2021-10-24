@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Je vous en pose, des questions sur votre appareil reproducteur ? Vous ne
     voulez pas plut\xF4t respecter nos rites ?"
-  speaker: {fileID: 0}
+  speaker: Le phrygien
   nextText: {fileID: 11400000, guid: 96c29dddd1540154f95a9aa13a7ab912, type: 2}

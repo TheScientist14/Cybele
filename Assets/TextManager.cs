@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 using TMPro;
 
 public class TextManager : MonoBehaviour
@@ -9,6 +10,9 @@ public class TextManager : MonoBehaviour
     public GameObject phrygien;
     public GameObject romain;
     public TextMeshProUGUI textPanel;
+
+    private Image phrygienImg;
+    private Image romainImg;
 
     public UnityEvent NextTextEvent;
 
@@ -25,6 +29,8 @@ public class TextManager : MonoBehaviour
             Destroy(gameObject);
         }
         NextTextEvent = new UnityEvent();
+        phrygienImg = phrygien.GetComponent<Image>();
+        romainImg = romain.GetComponent<Image>();
     }
 
     // Start is called before the first frame update
@@ -42,6 +48,21 @@ public class TextManager : MonoBehaviour
     public void SetText(Text text)
     {
         textPanel.text = text.text;
+        if (text.speaker.Equals("Tibère"))
+        {
+            phrygienImg.color = Color.grey;
+            romainImg.color = Color.white;
+        }
+        else if (text.speaker.Equals("Le phrygien"))
+        {
+            phrygienImg.color = Color.white;
+            romainImg.color = Color.grey;
+        }
+        else
+        {
+            phrygienImg.color = Color.grey;
+            romainImg.color = Color.grey;
+        }
     }
 
     public void NextText()

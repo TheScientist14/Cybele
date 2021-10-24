@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "C\u2019est \xE7a, bon vent ! Peut-\xEAtre que \xE7a vous fera prendre moins
     de mesures contre nous !"
-  speaker: {fileID: 0}
+  speaker: Le phrygien
   nextText: {fileID: 0}

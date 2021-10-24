@@ -1450,7 +1450,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversionBarText: {fileID: 24264755}
-  TimerText: {fileID: 1710300854}
+  MonthText: {fileID: 0}
+  YearText: {fileID: 0}
   slider: {fileID: 52429461}
 --- !u!1 &651790659
 GameObject:

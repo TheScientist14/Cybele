@@ -15,5 +15,5 @@ MonoBehaviour:
   text: "Mourir aussi b\xEAtement, comme \xE7a ?! Et dire que je ne me rappelle m\xEAme
     pas de mes derniers instants ! Est-ce que je suis mort dans mon sommeil ? Est-ce
     que ce vaurien de Caligula m\u2019a fait assassiner ?"
-  speaker: {fileID: 0}
+  speaker: "Tib\xE8re"
   nextText: {fileID: 11400000, guid: 3bd2cc9c932162e489cd6eb92a9b5302, type: 2}

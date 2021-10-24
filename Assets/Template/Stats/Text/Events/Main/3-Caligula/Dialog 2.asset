@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Dialog 2
   m_EditorClassIdentifier: 
   text: "En tout cas, maintenant, c\u2019est lui l\u2019empereur."
-  speaker: {fileID: 0}
+  speaker: Le phrygien
   nextText: {fileID: 11400000, guid: 5c74c282ca2b2644a9dc365adc85bf71, type: 2}

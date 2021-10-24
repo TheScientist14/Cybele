@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Quand m\xEAme, \xE7a fait bizarre qu\u2019Auguste ne soit plus l\xE0. Et
     maintenant c\u2019est moi l\u2019empereur !"
+  speaker: "Tib\xE8re"
   nextText: {fileID: 11400000, guid: 7d6682f7814c7cf468807cc0d2c17f83, type: 2}

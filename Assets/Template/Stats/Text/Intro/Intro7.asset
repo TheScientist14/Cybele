@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "J\u2019ai jamais entendu une musique pareille ! Bon, il va falloir g\xE9rer
     \xE7a. On ne peut pas laisser un tel bazar se promener dans les rues de Rome."
+  speaker: "Tib\xE8re"
   nextText: {fileID: 11400000, guid: 04a6ecdc0bb45944f97548f746b91a97, type: 2}
