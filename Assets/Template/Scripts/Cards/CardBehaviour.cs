@@ -65,4 +65,8 @@ public class CardBehaviour : MonoBehaviour
         button.enabled = true;
     }
 
+    public void PlaySound()
+    {
+        //cardSound;
+    }
 }
