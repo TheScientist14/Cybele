@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent CorruptionModified;
     public UnityEvent CorruptionTempMultiplierReset;
     public UnityEvent UpdateDeckEvent;
+    public UnityEvent IsGameFinished;
     public GameObject[] cards;
     public GameObject dialogue;
 
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
         CorruptionModified = new UnityEvent();
         CorruptionTempMultiplierReset = new UnityEvent();
         UpdateDeckEvent = new UnityEvent();
+        IsGameFinished = new UnityEvent();
         actionsBehaviour = new List<KeyValuePair<ActionBehaviour, CardBehaviour>>();
         foreach (GameObject card in cards)
         {
@@ -71,6 +74,9 @@ public class GameManager : MonoBehaviour
     {
         ResumeButton.onClick.AddListener(ResumeGame);
         ExitButton.onClick.AddListener(Application.Quit);
+        CorruptionModified.AddListener(LimitCorruption);
+        UpdateDeckEvent.AddListener(UpdateDeck);
+        IsGameFinished.AddListener(EndGame);
         PauseScreen.SetActive(false);
         isGameFinished = false;
         isRunning = true;
@@ -85,8 +91,6 @@ public class GameManager : MonoBehaviour
         DeactiveDeck();
         StartCoroutine("spawn");
         UIScript.instance.UpdateConversionBar();
-        CorruptionModified.AddListener(LimitCorruption);
-        UpdateDeckEvent.AddListener(UpdateDeck);
         EventManager.instance.EventSelectionCleared.AddListener(DeactiveDeck);
     }
 
@@ -127,6 +131,7 @@ public class GameManager : MonoBehaviour
                 }
             } else if ((int) timer == 324)
             {
+                IsGameFinished.Invoke();
                 isGameFinished = true;
             }
         }
@@ -318,6 +323,12 @@ public class GameManager : MonoBehaviour
     {
         PauseScreen.SetActive(false);
         isRunning = true;
+    }
+
+    public void EndGame()
+    {
+        PauseGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void SetIsRunning(bool b)
