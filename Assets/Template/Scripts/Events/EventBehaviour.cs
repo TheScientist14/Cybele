@@ -96,6 +96,8 @@ public abstract class EventBehaviour : MonoBehaviour
     public void ChangeText(string dialogue)
     {
         PanelDialogue.SetActive(true);
+        Tybere.SetActive(false);
+        Phrygien.SetActive(false);
         TextManager.instance.textPanel.SetText(dialogue);
     }
 }
