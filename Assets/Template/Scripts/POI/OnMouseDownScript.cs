@@ -64,7 +64,7 @@ public class OnMouseDownScript : MonoBehaviour
         }
     }
     
-    private void desableExplications()
+    public void desableExplications()
     {
         explications.SetActive(false);
         try
