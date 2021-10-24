@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CardBehaviour : MonoBehaviour
 {
     public GameObject confirmationGUITemplate;
+    public AudioClip cardSound;
 
     private ActionBehaviour cardAction;
     private Vector3 standardScale;
@@ -63,5 +64,10 @@ public class CardBehaviour : MonoBehaviour
     {
         image.enabled = true;
         button.enabled = true;
+    }
+
+    public void PlaySound()
+    {
+        cardSound;
     }
 }
