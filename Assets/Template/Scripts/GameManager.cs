@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.PlayerLoop;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
 
     public float initCorruption;
 
+    public GameObject PauseScreen;
+    public Button ResumeButton;
+    public Button ExitButton;
     public UnityEvent CorruptionModified;
     public UnityEvent CorruptionTempMultiplierReset;
     public UnityEvent UpdateDeckEvent;
@@ -21,6 +26,7 @@ public class GameManager : MonoBehaviour
     private float storyMultiplier; // never reset
     private bool isGameFinished;
     private bool isRunning;
+    private bool isTuto;
     private bool armyActivated;
 
     public GameObject[] poi;
@@ -62,8 +68,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ResumeButton.onClick.AddListener(ResumeGame);
+        ExitButton.onClick.AddListener(Application.Quit);
+        PauseScreen.SetActive(false);
         isGameFinished = false;
         isRunning = true;
+        isTuto = false;
         armyActivated = true;
         timer = 0f;
         corruption = initCorruption;
@@ -82,6 +92,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey("escape"))
+        {
+            PauseGame();
+        }
         if (IsRunning())
         {
             timer += Time.deltaTime;
@@ -119,7 +133,7 @@ public class GameManager : MonoBehaviour
 
     public bool IsRunning()
     {
-        return !isGameFinished && isRunning;
+        return !isGameFinished && isRunning && !isTuto;
     }
 
     void RandomAlert()
@@ -138,6 +152,13 @@ public class GameManager : MonoBehaviour
                 RandomAlert();
             }
         }
+    }
+
+    public void SpawnProcession()
+    {
+        alertScript = poi[3].GetComponent<AlertScript>();
+        alertScript.activateAlert();
+        IncreaseNbEvent();
     }
 
     public float GetTime()
@@ -270,5 +291,22 @@ public class GameManager : MonoBehaviour
     public bool IsArmyActivated()
     {
         return armyActivated;
+    }
+
+    public void EndTuto()
+    {
+        isTuto = false;
+    }
+
+    void PauseGame()
+    {
+        PauseScreen.SetActive(true);
+        isRunning = false;
+    }
+
+    void ResumeGame()
+    {
+        PauseScreen.SetActive(false);
+        isRunning = true;
     }
 }
