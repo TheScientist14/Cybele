@@ -69,8 +69,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ResumeButton.onClick.AddListener(ResumeGame);
-        ExitButton.onClick.AddListener(Application.Quit);
         PauseScreen.SetActive(false);
         isGameFinished = false;
         isRunning = true;
