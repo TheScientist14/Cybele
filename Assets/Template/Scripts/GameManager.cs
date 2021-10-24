@@ -218,6 +218,10 @@ public class GameManager : MonoBehaviour
         {
             corruption = 100;
         }
+        if(corruption < 0)
+        {
+            corruption = 0;
+        }
     }
 
     public float GetTotalCorruptionMultiplier()
@@ -298,15 +302,20 @@ public class GameManager : MonoBehaviour
         isTuto = false;
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         PauseScreen.SetActive(true);
         isRunning = false;
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         PauseScreen.SetActive(false);
         isRunning = true;
+    }
+
+    public void SetIsRunning(bool b)
+    {
+        isRunning = b;
     }
 }
