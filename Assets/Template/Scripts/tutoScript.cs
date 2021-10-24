@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class tutoScript : MonoBehaviour
 {
@@ -72,15 +73,19 @@ public class tutoScript : MonoBehaviour
                 break;
             case 7:
                 army.GetComponent<CardBehaviour>().Show();
+                army.GetComponent<Button>().enabled = false;
                 break;
             case 8:
                 sabotage.GetComponent<CardBehaviour>().Show();
+                army.GetComponent<Button>().enabled = false;
                 break;
             case 9:
                 speech.GetComponent<CardBehaviour>().Show();
+                army.GetComponent<Button>().enabled = false;
                 break;
             case 10:
                 peuple.GetComponent<CardBehaviour>().Show();
+                army.GetComponent<Button>().enabled = false;
                 break;
             case 11:
                 GameManager.instance.AddPassiveCorruption(1);
