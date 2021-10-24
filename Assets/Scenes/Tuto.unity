@@ -379,6 +379,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01083de020becb94b915dfe475558626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelDialogue: {fileID: 1091012581}
+  Tybere: {fileID: 673495169}
+  Phrygien: {fileID: 1347589731}
   dialogueArmy: {fileID: 11400000, guid: 23e66401e7c676247bb9e018b66dfa78, type: 2}
   dialogueSpeech: {fileID: 11400000, guid: e2aa128435e72cd4bb53d262b51b0a0d, type: 2}
   dialoguePeuple: {fileID: 11400000, guid: fb885259d3d7e054dbfde58475999e31, type: 2}
@@ -436,6 +439,7 @@ MonoBehaviour:
   - {fileID: 1566470158}
   - {fileID: 1592804818}
   dialogue: {fileID: 1091012581}
+  end: {fileID: 0}
   Germanicus: {fileID: 11400000, guid: 510ccffa5a5097049b7e27ddc10a0590, type: 2}
   Capri: {fileID: 11400000, guid: dd8d98e111e83dc468eb4e49cf6d41d3, type: 2}
   Caligula: {fileID: 11400000, guid: df85368c7b405684f987f69129476350, type: 2}
@@ -1356,6 +1360,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbcfdbc9d6ee16f40b7b09de78ecc9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelDialogue: {fileID: 1091012581}
+  Tybere: {fileID: 673495169}
+  Phrygien: {fileID: 1347589731}
   dialogueArmy: {fileID: 11400000, guid: 3f80efbae59edd542b44077726d1ca0f, type: 2}
   dialogueSpeech: {fileID: 11400000, guid: a3d5855463c22cf4c8a5ce040ebbb38f, type: 2}
   dialoguePeuple: {fileID: 11400000, guid: 387ab7503a3699d4185a40a1cff42bb7, type: 2}
@@ -1625,6 +1632,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104c9a63d770c8a479f536671f4e508d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelDialogue: {fileID: 1091012581}
+  Tybere: {fileID: 673495169}
+  Phrygien: {fileID: 1347589731}
   dialogueArmy: {fileID: 11400000, guid: 0d3acc1a12ea6334ab755538745a4490, type: 2}
   dialogueSpeech: {fileID: 11400000, guid: 3dbca2066a2a89040983b126793956c2, type: 2}
   dialoguePeuple: {fileID: 11400000, guid: 940492f14e8fb044fb85c15ec4f4cc9f, type: 2}
@@ -3593,6 +3603,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20fe50e8f81bd1445ae9f4f31ceb8f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelDialogue: {fileID: 1091012581}
+  Tybere: {fileID: 673495169}
+  Phrygien: {fileID: 1347589731}
   dialogueArmy: {fileID: 11400000, guid: b54cd1200b2680048a52aefce8e27c39, type: 2}
   dialogueSpeech: {fileID: 11400000, guid: 1c133b4989a226142943033e3f174848, type: 2}
   dialoguePeuple: {fileID: 11400000, guid: 5dcb2d3d27718a24aa5aca42efe5a20c, type: 2}
@@ -3894,6 +3907,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7317d132a1d305b45ac3fd69827b81ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelDialogue: {fileID: 1091012581}
+  Tybere: {fileID: 673495169}
+  Phrygien: {fileID: 1347589731}
   dialogueArmy: {fileID: 11400000, guid: d7f2a533bc091a4489687767f9f6adc1, type: 2}
   dialogueSpeech: {fileID: 11400000, guid: 5b40afd15fffa6047824691ec8830794, type: 2}
   dialoguePeuple: {fileID: 11400000, guid: 9982493afcf5fa748b2449f272c00cf8, type: 2}
