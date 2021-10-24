@@ -30,7 +30,7 @@ public class TextManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.instance.SetIsRunning(true);
+
     }
 
     // Update is called once per frame

@@ -30,6 +30,11 @@ public class tutoScript : MonoBehaviour
         TextManager.instance.NextTextEvent.AddListener(Next);
         iText = 1;
         TextManager.instance.SetText(intro);
+        GameManager.instance.SetIsRunning(false);
+        army.GetComponent<CardBehaviour>().Hide();
+        sabotage.GetComponent<CardBehaviour>().Hide();
+        speech.GetComponent<CardBehaviour>().Hide();
+        peuple.GetComponent<CardBehaviour>().Hide();
     }
 
     // Update is called once per frame
@@ -37,35 +42,33 @@ public class tutoScript : MonoBehaviour
     {
         if (listenProcession)
         {
-            if (notif.isAlertActivate())
+            if (!notif.isAlertActivate())
             {
                 TextManager.instance.gameObject.SetActive(true);
                 TextManager.instance.SetText(intro);
+                army.GetComponent<CardBehaviour>().Hide();
+                sabotage.GetComponent<CardBehaviour>().Hide();
+                speech.GetComponent<CardBehaviour>().Hide();
+                peuple.GetComponent<CardBehaviour>().Hide();
                 listenProcession = false;
             }
         }
     }
 
-    void runTuto()
-    {
-        
-    }
-
     void Next()
     {
+        Debug.Log("Next");
         switch (iText)
         {
             case 3:
                 notif.activateAlert();
-                // TODO block click
+                listenProcession = true;
                 break;
             case 4:
-                TextManager.instance.gameObject.SetActive(false);
-                listenProcession = true;
-                // TODO allow click
-                break;
-            case 5:
-                // TODO block click
+                if (listenProcession)
+                {
+                    TextManager.instance.gameObject.SetActive(false);
+                }
                 break;
             case 7:
                 army.GetComponent<CardBehaviour>().Show();
@@ -91,6 +94,7 @@ public class tutoScript : MonoBehaviour
         if(intro.nextText != null)
         {
             intro = intro.nextText;
+            TextManager.instance.SetText(intro);
             iText++;
         }
         else
