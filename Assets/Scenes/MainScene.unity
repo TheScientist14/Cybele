@@ -751,6 +751,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20fe50e8f81bd1445ae9f4f31ceb8f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelDialogue: {fileID: 2055738030}
+  Tybere: {fileID: 567369333}
+  Phrygien: {fileID: 1997172274}
   dialogueArmy: {fileID: 11400000, guid: b54cd1200b2680048a52aefce8e27c39, type: 2}
   dialogueSpeech: {fileID: 11400000, guid: 1c133b4989a226142943033e3f174848, type: 2}
   dialoguePeuple: {fileID: 11400000, guid: 5dcb2d3d27718a24aa5aca42efe5a20c, type: 2}
@@ -1023,6 +1026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 308160143}
   - component: {fileID: 308160142}
+  - component: {fileID: 308160144}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1064,6 +1068,7 @@ MonoBehaviour:
   - {fileID: 875411205}
   - {fileID: 1642275988}
   dialogue: {fileID: 2055738030}
+  end: {fileID: 1665923791}
   Germanicus: {fileID: 11400000, guid: 510ccffa5a5097049b7e27ddc10a0590, type: 2}
   Capri: {fileID: 11400000, guid: dd8d98e111e83dc468eb4e49cf6d41d3, type: 2}
   Caligula: {fileID: 11400000, guid: df85368c7b405684f987f69129476350, type: 2}
@@ -1088,6 +1093,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &308160144
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308160141}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3780eb322a58e4a4b96f075ac653f3fa, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.624
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &357980664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2623,6 +2724,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbcfdbc9d6ee16f40b7b09de78ecc9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelDialogue: {fileID: 2055738030}
+  Tybere: {fileID: 567369333}
+  Phrygien: {fileID: 1997172274}
   dialogueArmy: {fileID: 11400000, guid: 3f80efbae59edd542b44077726d1ca0f, type: 2}
   dialogueSpeech: {fileID: 11400000, guid: a3d5855463c22cf4c8a5ce040ebbb38f, type: 2}
   dialoguePeuple: {fileID: 11400000, guid: 387ab7503a3699d4185a40a1cff42bb7, type: 2}
@@ -2831,9 +2935,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 308160142}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: CloseDialogue
+      - m_Target: {fileID: 2055738034}
+        m_TargetAssemblyTypeName: TextManager, Assembly-CSharp
+        m_MethodName: NextText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2898,6 +3002,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01083de020becb94b915dfe475558626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelDialogue: {fileID: 2055738030}
+  Tybere: {fileID: 567369333}
+  Phrygien: {fileID: 1997172274}
   dialogueArmy: {fileID: 11400000, guid: 23e66401e7c676247bb9e018b66dfa78, type: 2}
   dialogueSpeech: {fileID: 11400000, guid: e2aa128435e72cd4bb53d262b51b0a0d, type: 2}
   dialoguePeuple: {fileID: 11400000, guid: fb885259d3d7e054dbfde58475999e31, type: 2}
@@ -3037,6 +3144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7317d132a1d305b45ac3fd69827b81ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelDialogue: {fileID: 2055738030}
+  Tybere: {fileID: 567369333}
+  Phrygien: {fileID: 1997172274}
   dialogueArmy: {fileID: 11400000, guid: d7f2a533bc091a4489687767f9f6adc1, type: 2}
   dialogueSpeech: {fileID: 11400000, guid: 5b40afd15fffa6047824691ec8830794, type: 2}
   dialoguePeuple: {fileID: 11400000, guid: 9982493afcf5fa748b2449f272c00cf8, type: 2}
@@ -3840,6 +3950,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104c9a63d770c8a479f536671f4e508d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelDialogue: {fileID: 2055738030}
+  Tybere: {fileID: 567369333}
+  Phrygien: {fileID: 1997172274}
   dialogueArmy: {fileID: 11400000, guid: 0d3acc1a12ea6334ab755538745a4490, type: 2}
   dialogueSpeech: {fileID: 11400000, guid: 3dbca2066a2a89040983b126793956c2, type: 2}
   dialoguePeuple: {fileID: 11400000, guid: 940492f14e8fb044fb85c15ec4f4cc9f, type: 2}
