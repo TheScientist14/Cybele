@@ -12,7 +12,8 @@ public class UIScript : MonoBehaviour
 
     public static UIScript instance;
     public TextMeshProUGUI conversionBarText;
-    public TextMeshProUGUI TimerText;
+    public TextMeshProUGUI MonthText;
+    public TextMeshProUGUI YearText;
     public Slider slider;
     
     // Start is called before the first frame update
@@ -51,6 +52,8 @@ public class UIScript : MonoBehaviour
 
     public void UpdateTimer()
     {
-        TimerText.SetText((int) GameManager.instance.GetTime() + "");
+        int year = ((int) GameManager.instance.GetTime() / 12) + 14;
+        MonthText.SetText((int) GameManager.instance.GetTime()%12 + 1 + "");
+        YearText.SetText(year + "");
     }
 }
