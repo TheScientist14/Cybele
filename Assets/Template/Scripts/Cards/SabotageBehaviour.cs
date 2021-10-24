@@ -6,6 +6,11 @@ public class SabotageBehaviour : ActionBehaviour
 {
     private float probabilitySuccess = 30;
 
+    public void PlaySound()
+    {
+        GetComponent<AudioSource>().Play();
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +25,7 @@ public class SabotageBehaviour : ActionBehaviour
 
     public override void DoAction()
     {
+        PlaySound();
         EventManager.instance.GetSelectedEvent().SabotageConsequence(Random.Range(0, 1) > 0.01 * probabilitySuccess);
         lastAction = id;
     }

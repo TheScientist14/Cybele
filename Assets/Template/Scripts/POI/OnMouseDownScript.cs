@@ -11,7 +11,8 @@ public class OnMouseDownScript : MonoBehaviour
     public Button button;
     private bool firstVisit;
     public GameObject explications;
-    
+    public AudioClip sound;
+
     void Awake()
     {
         camera = Camera.main;
@@ -32,6 +33,8 @@ public class OnMouseDownScript : MonoBehaviour
 
     void OnMouseDown()
     {
+        GetComponent<AudioSource>().clip = sound;
+        GetComponent<AudioSource>().Play();
         if (evnt.isActiveAndEnabled)
         {
             alert.SetActive(false);

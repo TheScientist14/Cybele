@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PeupleBehaviour : ActionBehaviour
 {
+    public void PlaySound()
+    {
+        GetComponent<AudioSource>().Play();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +22,7 @@ public class PeupleBehaviour : ActionBehaviour
 
     public override void DoAction()
     {
+        PlaySound();
         if (EventManager.instance.GetSelectedEvent().IsPositive())
         {
             GameManager.instance.SetCorruptionTempMultiplier(GameManager.instance.GetCorruptionTempMultiplier()/2);

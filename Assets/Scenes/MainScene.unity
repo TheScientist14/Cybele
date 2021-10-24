@@ -623,8 +623,8 @@ MonoBehaviour:
   dialogueSabotageSuccess: {fileID: 11400000, guid: 396cb6dacc5443845b0e543f9008eb6c, type: 2}
   dialogueSabotageFail: {fileID: 11400000, guid: ab948f63758458e47801e1ac9c7e860f, type: 2}
   PanelDialogue: {fileID: 2055738030}
-  Tybere: {fileID: 0}
-  Phrygien: {fileID: 0}
+  Tybere: {fileID: 567369333}
+  Phrygien: {fileID: 1997172274}
 --- !u!1001 &116783717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -658,19 +658,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 2.496
+      value: 2.36
       objectReference: {fileID: 0}
     - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 1.3068
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.43
+      value: 2.36
       objectReference: {fileID: 0}
     - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.29
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 343333670188296293, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_Name
@@ -924,6 +924,9 @@ MonoBehaviour:
   UpdateDeckEvent:
     m_PersistentCalls:
       m_Calls: []
+  IsGameFinished:
+    m_PersistentCalls:
+      m_Calls: []
   cards:
   - {fileID: 1124008076}
   - {fileID: 1599491917}
@@ -970,6 +973,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2245735279903874032, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 62069f38e33ece342b115a03c7bf5534, type: 3}
     - target: {fileID: 5597875793562986064, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1054,17 +1061,49 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6640382549557786560, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ff20590910550054bb9c9e7a55599ffa, type: 3}
+    - target: {fileID: 8585959277848485553, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585959277848485553, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8585959277848485553, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1124008081}
     - target: {fileID: 8585959277848485553, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585959277848485553, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585959277848485553, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Click
       objectReference: {fileID: 0}
     - target: {fileID: 8585959277848485553, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585959277848485553, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CardBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585959277848485553, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CardBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585959277848485553, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8672647599083081336, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_Type
@@ -1117,6 +1156,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2245735279903874032, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: dd16545ff7d11f4449569e83a9015c88, type: 3}
     - target: {fileID: 5597875793562986064, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1213,6 +1256,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6640382549557786560, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c2c9247ae857c4d48ae10bfc1da08bb6, type: 3}
     - target: {fileID: 8585959277848485553, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1955,6 +2002,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2245735279903874032, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d7fd9687063a09468e60360b010fae6, type: 3}
     - target: {fileID: 5597875793562986064, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2039,6 +2090,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6640382549557786560, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b7627ccac4a980b42a33a184050c5f90, type: 3}
     - target: {fileID: 8585959277848485553, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2248,6 +2303,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2245735279903874032, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 909a68fffd1d43348ae58463d7205bbe, type: 3}
     - target: {fileID: 5597875793562986064, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2344,6 +2403,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6640382549557786560, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 29ab73fdc9468b24293ef3b0e10bcdd7, type: 3}
     - target: {fileID: 8585959277848485553, guid: b3a55db8b0b966641ae7dea2af832344, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2431,8 +2494,8 @@ MonoBehaviour:
   dialogueSabotageSuccess: {fileID: 11400000, guid: 9338b2c14170d4c439586fdded9fad63, type: 2}
   dialogueSabotageFail: {fileID: 11400000, guid: 289c07be9ef3d8d4b90307351ba3a8fc, type: 2}
   PanelDialogue: {fileID: 2055738030}
-  Tybere: {fileID: 0}
-  Phrygien: {fileID: 0}
+  Tybere: {fileID: 567369333}
+  Phrygien: {fileID: 1997172274}
 --- !u!1 &1009600524
 GameObject:
   m_ObjectHideFlags: 0
@@ -2709,8 +2772,8 @@ MonoBehaviour:
   dialogueSabotageSuccess: {fileID: 11400000, guid: 64b7b8d0c7a5b06488501a808b7f8547, type: 2}
   dialogueSabotageFail: {fileID: 11400000, guid: ce53b807fdb53994c9b04c9c5d8c8e1d, type: 2}
   PanelDialogue: {fileID: 2055738030}
-  Tybere: {fileID: 0}
-  Phrygien: {fileID: 0}
+  Tybere: {fileID: 567369333}
+  Phrygien: {fileID: 1997172274}
 --- !u!1 &1115619252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,8 +2914,8 @@ MonoBehaviour:
   dialogueSabotageSuccess: {fileID: 11400000, guid: b52120a32366d9a4d89c283e58cae58f, type: 2}
   dialogueSabotageFail: {fileID: 11400000, guid: 9cda52438f824b24e9776836ab49a60c, type: 2}
   PanelDialogue: {fileID: 2055738030}
-  Tybere: {fileID: 0}
-  Phrygien: {fileID: 0}
+  Tybere: {fileID: 567369333}
+  Phrygien: {fileID: 1997172274}
 --- !u!1001 &1191140215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2860,6 +2923,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 651790660}
     m_Modifications:
+    - target: {fileID: -6312503419067067174, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 8300000, guid: ead486a7fe399954b853a0bf2b6916ca, type: 3}
     - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_Size.x
       value: 1.92
@@ -3532,8 +3599,8 @@ MonoBehaviour:
   dialogueSabotageSuccess: {fileID: 11400000, guid: 30bf665693dbf4e4da68001c2baf5529, type: 2}
   dialogueSabotageFail: {fileID: 11400000, guid: 62522cf5415584a45a612d559dae4e49, type: 2}
   PanelDialogue: {fileID: 2055738030}
-  Tybere: {fileID: 0}
-  Phrygien: {fileID: 0}
+  Tybere: {fileID: 567369333}
+  Phrygien: {fileID: 1997172274}
 --- !u!1001 &1897064218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3884,6 +3951,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 651790660}
     m_Modifications:
+    - target: {fileID: -6312503419067067174, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 53a0a7163ef035f4d94890db4b5906ce, type: 3}
     - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_Size.x
       value: 1.2
@@ -3950,6 +4021,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7361902526677841872, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_DrawMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548829696613483717, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8649571969355198072, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}

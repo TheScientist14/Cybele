@@ -22,4 +22,5 @@ public abstract class ActionBehaviour : MonoBehaviour
     public abstract void DoAction();
 
     public abstract bool IsActive();
+
 }
