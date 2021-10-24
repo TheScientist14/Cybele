@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
   m_Name: HighCorruption
   m_EditorClassIdentifier: 
-  text: 
+  text: "Caligula meurt assassin\xE9 et Claude lui succ\xE8de. Face au succ\xE8s
+    grandissant du culte de Cyb\xE8le, il d\xE9cide de prendre des mesures pour le
+    faire accepter officiellement dans tous ses aspects. Tous les rites phrygiens
+    sont autoris\xE9s et peuvent se produire publiquement. Les citoyens romains obtiennent
+    le droit d\u2019y participer."
   speaker: {fileID: 0}
   nextText: {fileID: 0}

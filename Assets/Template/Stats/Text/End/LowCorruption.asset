@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
   m_Name: LowCorruption
   m_EditorClassIdentifier: 
-  text: 
+  text: "Caligula meurt assassin\xE9 et Claude lui succ\xE8de. Face au succ\xE8s
+    grandissant du culte de Cyb\xE8le, il d\xE9cide de prendre des mesures pour d\xE9finitivement
+    endiguer la d\xE9cadence phrygienne qui se r\xE9pand dans Rome. Il modifie fondamentalement
+    le culte pour que tous les rites \xE9trangers soient remplac\xE9s par des rites
+    bien romains. Les processions s\u2019assagissent et les serviteurs de la d\xE9esse
+    deviennent semblable \xE0 tous les sacerdoces des cultes de Rome"
   speaker: {fileID: 0}
   nextText: {fileID: 0}

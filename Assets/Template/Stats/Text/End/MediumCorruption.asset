@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
   m_Name: MediumCorruption
   m_EditorClassIdentifier: 
-  text: 
+  text: "Caligula meurt assassin\xE9 et Claude lui succ\xE8de. Face au succ\xE8s
+    grandissant du culte de Cyb\xE8le, il d\xE9cide de prendre des mesures pour le
+    faire accepter officiellement tout en modifiant ses aspects les plus d\xE9lirants.
+    L\u2019\xE9masculation est peu \xE0 peu interdite et remplac\xE9e par l\u2019immolation
+    d\u2019un taureau. Les rites phrygiens demeurent tout de m\xEAme, \xE0 condition
+    qu\u2019ils n\u2019aillent pas trop \xE0 l\u2019encontre des valeurs romaines."
   speaker: {fileID: 0}
   nextText: {fileID: 0}
