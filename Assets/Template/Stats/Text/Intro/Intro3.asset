@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
+  m_Name: Intro3
+  m_EditorClassIdentifier: 
+  text: "Bon, quels sont les dossiers importants \xE0 g\xE9rer \xE0 Rome en ce moment
+    ?"
+  nextText: {fileID: 11400000, guid: 1c9609a6f7ab34e4591f05237f14a9ea, type: 2}

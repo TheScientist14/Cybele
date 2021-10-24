@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
+  m_Name: PresageDescription
+  m_EditorClassIdentifier: 
+  text: "Sur le forum, un \xE9trange serviteur de Cyb\xE8le s\u2019avance. Tout le
+    monde s\u2019arr\xEAte de parler et le regarde. L\u2019homme \xE9nonce d\u2019une
+    voix forte une pr\xE9diction de mauvais augure : l\u2019hiver sera terrible et
+    la famine menace\u2026! Pour \xE9viter cela, il faut que les femmes Romaines
+    lui donnent dans l\u2019instant leurs plus beaux v\xEAtements !  Tous les Romains
+    pr\xE9sents semblent horrifi\xE9s et pr\xEAts \xE0 croire cet augure. "
+  nextText: {fileID: 0}

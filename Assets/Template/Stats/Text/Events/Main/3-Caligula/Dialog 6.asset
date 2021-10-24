@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
+  m_Name: Dialog 6
+  m_EditorClassIdentifier: 
+  text: "Pour \xEAtre honn\xEAte : oui. Caligula, au moins, s\u2019int\xE9resse vraiment
+    aux cultes \xE9trangers et ne monte pas la population contre nous."
+  speaker: {fileID: 0}
+  nextText: {fileID: 11400000, guid: 63539919fb29ea545b096889a7cc464f, type: 2}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
+  m_Name: Dialog 4
+  m_EditorClassIdentifier: 
+  text: "C\u2019est \xE7a, bien s\xFBr ! C\u2019est juste des man\u0153uvres politiques
+    tout \xE7a. D\u2019ailleurs, vous ne vous \xEAtes jamais vraiment int\xE9ress\xE9
+    \xE0 nos valeurs. Elles ne sont pas si diff\xE9rentes des v\xF4tres\u2026 En
+    fait on est juste un culte parmi tant d\u2019autres."
+  speaker: {fileID: 0}
+  nextText: {fileID: 11400000, guid: 86032b489982a184c8d587e657495894, type: 2}

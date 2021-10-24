@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
+  m_Name: Intro8
+  m_EditorClassIdentifier: 
+  text: "Je pourrais envoyer l\u2019arm\xE9e, par exemple ! C\u2019est s\xFBr que
+    \xE7a ferait dispara\xEEtre le probl\xE8me. Mais \xE7a ne va pas am\xE9liorer
+    ma r\xE9putation, et les prochains troubles risquent d\u2019\xEAtre encore plus
+    durs. Et il faut que j\u2019\xE9vite de le faire trop de fois d\u2019affil\xE9e..."
+  nextText: {fileID: 11400000, guid: bda8a7c929c557a49aefe5091e645b23, type: 2}

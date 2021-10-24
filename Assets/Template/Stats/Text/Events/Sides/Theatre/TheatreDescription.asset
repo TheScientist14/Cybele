@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
+  m_Name: TheatreDescription
+  m_EditorClassIdentifier: 
+  text: "La semaine annuelle de f\xEAte en l\u2019honneur de Cyb\xE8le approche,
+    et les pi\xE8ces de th\xE9\xE2tre qui y sont traditionnellement jou\xE9es ont
+    encore obtenu l\u2019autorisation d\u2019avoir lieu dans le th\xE9\xE2tre officiel
+    de Rome. Les magistrats en charge de ces jeux pensent que cela ferait plaisir
+    \xE0 la population."
+  speaker: {fileID: 0}
+  nextText: {fileID: 0}

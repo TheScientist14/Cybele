@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
+  m_Name: PresageSabotageSuccess
+  m_EditorClassIdentifier: 
+  text: "L\u2019un des marchands pr\xE9sents sur la place s\u2019exclame : \u201CMerci
+    \xE0 tous d\u2019\xEAtre venus \xE0 cette merveilleuse pi\xE8ce de th\xE9\xE2tre
+    ! Retrouvez-nous d\xE8s la semaine prochaine dans toutes les salles du Latium
+    !\u201D et pousse l\u2019homme hors du forum."
+  nextText: {fileID: 0}

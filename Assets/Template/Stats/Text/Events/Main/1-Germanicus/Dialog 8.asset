@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
+  m_Name: Dialog 8
+  m_EditorClassIdentifier: 
+  text: "Mais bien s\xFBr ! Laissez nos belles valeurs se perdre\u2026 Bon, \xE9coutez,
+    j\u2019ai d\u2019autres lions \xE0 fouetter moi. J\u2019ordonne de ce pas \xE0
+    Germanicus d\u2019entreprendre une campagne militaire en Orient. C\u2019est risqu\xE9
+    de me s\xE9parer"
+  speaker: {fileID: 0}
+  nextText: {fileID: 0}

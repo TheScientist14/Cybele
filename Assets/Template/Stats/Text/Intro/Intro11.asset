@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38125fc74f9048c44bc9f081606179bb, type: 3}
+  m_Name: Intro11
+  m_EditorClassIdentifier: 
+  text: "Mais si je n\u2019ai plus de solutions \xE0 disposition, c\u2019est s\xFBr
+    que le peuple va s\u2019attrouper et aller voir. Et \xE7a, c\u2019est vraiment
+    terrible !"
+  nextText: {fileID: 11400000, guid: ff6d6ff8e57fbd849bc0e009672d6797, type: 2}
