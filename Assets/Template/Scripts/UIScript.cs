@@ -53,7 +53,9 @@ public class UIScript : MonoBehaviour
     public void UpdateTimer()
     {
         int year = ((int) GameManager.instance.GetTime() / 12) + 14;
-        MonthText.SetText((int) GameManager.instance.GetTime()%12 + 1 + "");
+        int month = (int) GameManager.instance.GetTime() % 12 + 1;
+        DateTime date = new DateTime(year, month, 1);
+        MonthText.SetText( date.ToString("MMM") + "");
         YearText.SetText(year + "");
     }
 }
