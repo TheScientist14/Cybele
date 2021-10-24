@@ -10,6 +10,9 @@ public abstract class EventBehaviour : MonoBehaviour
     private float delayEnd = float.MaxValue;
     protected float passiveCorruptionDelta = 0.5f;
     protected float activeCorruptionDelta = 5f;
+    public GameObject PanelDialogue;
+    public GameObject Tybere;
+    public GameObject Phrygien;
     public Dialogue dialogueArmy;
     public Dialogue dialogueSpeech;
     public Dialogue dialoguePeuple;
@@ -45,20 +48,19 @@ public abstract class EventBehaviour : MonoBehaviour
     public void ArmyConsequence()
     {
         DoEvent();
-        TextManager.instance.gameObject.SetActive(true);
+        PanelDialogue.SetActive(true);
         ChangeText(dialogueArmy.text);
     }
 
     public void SpeechConsequence()
     {
         DoEvent();
-        TextManager.instance.gameObject.SetActive(true);
+        PanelDialogue.SetActive(true);
         ChangeText(dialogueSpeech.text);
     }
 
     public void SabotageConsequence(bool success)
     {
-        TextManager.instance.gameObject.SetActive(true);
         if (success)
         {
             ChangeText(dialogueSabotageSuccess.text);
@@ -68,11 +70,13 @@ public abstract class EventBehaviour : MonoBehaviour
             DoEvent();
             ChangeText(dialogueSabotageFail.text);
         }
+        PanelDialogue.SetActive(true);
     }
 
     public void PopulationConsequence()
     {
         DoEvent();
+        PanelDialogue.SetActive(true);
         ChangeText(dialoguePeuple.text);
     }
 
@@ -92,8 +96,9 @@ public abstract class EventBehaviour : MonoBehaviour
 
     public void ChangeText(string dialogue)
     {
-        TextManager.instance.gameObject.SetActive(true);
-        TextManager.instance.NextTextEvent.AddListener(GameManager.instance.CloseDialogue);
+        PanelDialogue.SetActive(true);
+        Tybere.SetActive(false);
+        Phrygien.SetActive(false);
         TextManager.instance.textPanel.SetText(dialogue);
     }
 }

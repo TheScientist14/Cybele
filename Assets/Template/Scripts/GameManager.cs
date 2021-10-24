@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent IsGameFinished;
     public GameObject[] cards;
     public GameObject dialogue;
+    public GameObject end;
 
     public Dialogue Germanicus;
     public Dialogue Capri;
@@ -85,6 +86,7 @@ public class GameManager : MonoBehaviour
         UpdateDeckEvent.AddListener(UpdateDeck);
         IsGameFinished.AddListener(EndGame);
         PauseScreen.SetActive(false);
+        end.SetActive(false);
         isGameFinished = false;
         isRunning = true;
         isTuto = false;
@@ -120,6 +122,7 @@ public class GameManager : MonoBehaviour
                     armyActivated = false;
                     UpdateDeckEvent.Invoke();
                     PauseGame();
+                    dialogue.SetActive(true);
                     TextManager.instance.NextTextEvent.AddListener(DisplayEvent);
                     currentDialogue = Germanicus;
                     TextManager.instance.SetText(currentDialogue);
@@ -379,7 +382,7 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         PauseGame();
-        
+        end.SetActive(true);
     }
 
     public void SetIsRunning(bool b)
