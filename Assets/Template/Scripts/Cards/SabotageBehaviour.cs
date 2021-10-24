@@ -34,7 +34,6 @@ public class SabotageBehaviour : ActionBehaviour
 
     public override bool IsActive()
     {
-        Debug.Log(GameManager.instance.GetCorruption());
         return (GameManager.instance.GetCorruption() < 50
             && (EventManager.instance.GetSelectedEvent() == null
             || !EventManager.instance.GetSelectedEvent().IsPositive()));

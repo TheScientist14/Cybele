@@ -21,9 +21,7 @@ public class ConfirmationGUIBehaviour : MonoBehaviour
     public void Confirm()
     {
         CardSelection.instance.GetSelectedAction().DoAction();
-        EventManager.instance.SelectEvent(null);
-        CardSelection.instance.ClearSelection();
-        cam.Reset();
+        EventManager.instance.ClearSelection();
     }
 
     public void Cancel()

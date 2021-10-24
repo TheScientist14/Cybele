@@ -59,8 +59,8 @@ public class EventManager : MonoBehaviour
     public void ClearSelection()
     {
         selectedEvent = null;
-        CardSelection.instance.ClearSelection();
         EventSelectionCleared.Invoke();
+        CardSelection.instance.ClearSelection();
     }
 
     /*

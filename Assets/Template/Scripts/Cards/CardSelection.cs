@@ -13,12 +13,6 @@ public class CardSelection : MonoBehaviour
 
     void Awake()
     {
-        SelectionHasChanged = new UnityEvent();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
         // Singleton
         if(instance == null)
         {
@@ -28,6 +22,12 @@ public class CardSelection : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        SelectionHasChanged = new UnityEvent();
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
     }
 
     // Update is called once per frame
@@ -40,7 +40,6 @@ public class CardSelection : MonoBehaviour
     {
         selectedCard = null;
         SelectionHasChanged.Invoke();
-        Debug.Log("cleared");
     }
 
     public void SelectAction(ActionBehaviour card)

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent CorruptionModified;
     public UnityEvent CorruptionTempMultiplierReset;
+    public UnityEvent UpdateDeckEvent;
     public GameObject[] cards;
 
     private float timer;
@@ -20,17 +21,16 @@ public class GameManager : MonoBehaviour
     private float storyMultiplier; // never reset
     private static bool isGameFinished;
     private bool armyActivated;
-    private bool posistifEvent;
-    private bool nonStopConversion;
 
     public GameObject[] poi;
     private int randomPOI;
     private int positifEventPOI;
-    private List<ActionBehaviour> actionsBehaviour;
+    private List<KeyValuePair<ActionBehaviour, CardBehaviour>> actionsBehaviour;
 
     public static GameManager instance;
     private static int nbEventAwake;
     private AlertScript alertScript;
+    private bool isDeckActive = false;
 
     void Awake()
     {
@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
         if(instance == null)
         {
             instance = this;
-            Debug.Log("set");
         }
         else
         {
@@ -46,13 +45,15 @@ public class GameManager : MonoBehaviour
         }
         CorruptionModified = new UnityEvent();
         CorruptionTempMultiplierReset = new UnityEvent();
-        actionsBehaviour = new List<ActionBehaviour>();
+        UpdateDeckEvent = new UnityEvent();
+        actionsBehaviour = new List<KeyValuePair<ActionBehaviour, CardBehaviour>>();
         foreach (GameObject card in cards)
         {
-            ActionBehaviour cardBehaviour = card.GetComponent<ActionBehaviour>();
-            if(cardBehaviour != null)
+            ActionBehaviour actionBehaviour = card.GetComponent<ActionBehaviour>();
+            CardBehaviour cardBehaviour = card.GetComponent<CardBehaviour>();
+            if(actionBehaviour != null && cardBehaviour != null)
             {
-                actionsBehaviour.Add(cardBehaviour);
+                actionsBehaviour.Add(new KeyValuePair<ActionBehaviour, CardBehaviour>(actionBehaviour, cardBehaviour));
             }
         }
     }
@@ -62,8 +63,6 @@ public class GameManager : MonoBehaviour
     {
         isGameFinished = false;
         armyActivated = true;
-        posistifEvent = true;
-        nonStopConversion = false;
         timer = 0f;
         corruption = initCorruption;
         tempMultiplier = 1f;
@@ -74,6 +73,8 @@ public class GameManager : MonoBehaviour
         StartCoroutine("spawn");
         UIScript.instance.UpdateConversionBar();
         CorruptionModified.AddListener(LimitCorruption);
+        UpdateDeckEvent.AddListener(UpdateDeck);
+        EventManager.instance.EventSelectionCleared.AddListener(DeactiveDeck);
     }
 
     // Update is called once per frame
@@ -83,16 +84,28 @@ public class GameManager : MonoBehaviour
         UIScript.instance.UpdateTimer();
         if ((int) timer == 37)
         {
-            armyActivated = false;
+            if (armyActivated)
+            {
+                armyActivated = false;
+                UpdateDeckEvent.Invoke();
+            }
         } else if ((int) timer == 72)
         {
-            armyActivated = true;
+            if (!armyActivated)
+            {
+                armyActivated = true;
+                UpdateDeckEvent.Invoke();
+            }
         } else if ((int) timer == 108)
         {
             positifEventPOI = 1;
         } else if ((int) timer >= 264 && (int) timer <= 324)
         {
-            storyMultiplier = 1;
+            if(storyMultiplier == 1)
+            {
+                storyMultiplier = 2;
+                UpdateDeckEvent.Invoke();
+            }
         } else if ((int) timer == 324)
         {
             isGameFinished = true;
@@ -201,17 +214,34 @@ public class GameManager : MonoBehaviour
 
     public void ActiveDeck()
     {
-        foreach (ActionBehaviour card in actionsBehaviour)
+        isDeckActive = true;
+        foreach (KeyValuePair<ActionBehaviour, CardBehaviour> card in actionsBehaviour)
         {
-            card.gameObject.SetActive(card.IsActive());
+            if (card.Key.IsActive())
+            {
+                card.Value.Show();
+            }
+            else
+            {
+                card.Value.Hide();
+            }
         }
     }
 
     public void DeactiveDeck()
     {
-        foreach (ActionBehaviour card in actionsBehaviour)
+        isDeckActive = false;
+        foreach (KeyValuePair<ActionBehaviour, CardBehaviour> card in actionsBehaviour)
         {
-            card.gameObject.SetActive(false);
+            card.Value.Hide();
+        }
+    }
+
+    public void UpdateDeck()
+    {
+        if (isDeckActive)
+        {
+            ActiveDeck();
         }
     }
 

@@ -22,7 +22,7 @@ public class ArmyBehaviour : ActionBehaviour
         GameManager.instance.SetCorruptionTempMultiplier(GameManager.instance.GetCorruptionTempMultiplier() * 2);
         if (lastAction.Equals(id))
         {
-            lastAction = id + 2;
+            lastAction = id + "2";
         }
         else
         {
@@ -32,6 +32,7 @@ public class ArmyBehaviour : ActionBehaviour
 
     public override bool IsActive()
     {
-        return !lastAction.Equals(id + 2);
+        Debug.Log(lastAction);
+        return (!lastAction.Equals(id + "2") && GameManager.instance.IsArmyActivated());
     }
 }
