@@ -379,7 +379,7 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         PauseGame();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
     }
 
     public void SetIsRunning(bool b)
