@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public UnityEvent UpdateDeckEvent;
     public GameObject[] cards;
     public GameObject dialogue;
+    public Dialogue text;
+    private bool corruptionSup;
 
     private float timer;
     // corruption related variables
@@ -74,6 +76,7 @@ public class GameManager : MonoBehaviour
         isRunning = true;
         isTuto = false;
         armyActivated = true;
+        corruptionSup = false;
         timer = 0f;
         corruption = initCorruption;
         tempMultiplier = 1f;
@@ -101,6 +104,7 @@ public class GameManager : MonoBehaviour
             UIScript.instance.UpdateTimer();
             if ((int) timer == 37)
             {
+                
                 if (armyActivated)
                 {
                     armyActivated = false;
@@ -192,6 +196,12 @@ public class GameManager : MonoBehaviour
     {
         corruption += corruptionDelta;
         CorruptionModified.Invoke();
+        if (corruption >= 50 && !corruptionSup)
+        {
+            corruptionSup = true;
+            dialogue.SetActive(true);
+            TextManager.instance.textPanel.SetText(text.text);
+        }
     }
 
     // reset multiplier
@@ -203,6 +213,12 @@ public class GameManager : MonoBehaviour
             corruption += corruptionDelta;
             SetCorruptionTempMultiplier(1);
             CorruptionTempMultiplierReset.Invoke();
+            if (corruption >= 50 && !corruptionSup)
+            {
+                corruptionSup = true;
+                dialogue.SetActive(true);
+                TextManager.instance.textPanel.SetText(text.text);
+            }
         }
         else
         {
