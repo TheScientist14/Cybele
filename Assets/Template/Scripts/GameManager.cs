@@ -149,11 +149,14 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         float spawnRate = 10f;
-        while (IsRunning())
+        while (true)
         {
-            RandomAlert();
-            yield return new WaitForSeconds(spawnRate);
-            spawnRate -= 0.1f;
+            if (IsRunning())
+            {
+                RandomAlert();
+                yield return new WaitForSeconds(spawnRate);
+                spawnRate -= 0.1f;
+            }
         }
     }
 
