@@ -187,15 +187,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: '%'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ab383c9ab5fb08d42b1087b4648a4e73, type: 2}
+  m_sharedMaterial: {fileID: 5629292342797651162, guid: ab383c9ab5fb08d42b1087b4648a4e73, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4280821825
+  m_fontColor: {r: 0.25490198, g: 0.15686275, b: 0.15686275, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -608,6 +608,10 @@ PrefabInstance:
         transporte sur un char la statue de la d\xE9esse.\r\n\r\nLa procession est
         effrayante, mais aussi fascinante, et les Romains la regardent passer d\u2019un
         air curieux.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687653713764297116, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7361902526677841872, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_Color.b
@@ -1609,6 +1613,10 @@ PrefabInstance:
         !\r\n\r\nTous les Romains pr\xE9sents semblent horrifi\xE9s et pr\xEAts \xE0
         croire cet augure.\r"
       objectReference: {fileID: 0}
+    - target: {fileID: 4687653713764297116, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5279188175381792880, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: explications
       value: 
@@ -2376,7 +2384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.25490198, g: 0.15686275, b: 0.15686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2384,7 +2392,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 2bf1e91e7dbe86f4990c79b69c3b74b5, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -2657,7 +2665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.25490198, g: 0.15686275, b: 0.15686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2665,7 +2673,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 2bf1e91e7dbe86f4990c79b69c3b74b5, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -2836,15 +2844,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ab383c9ab5fb08d42b1087b4648a4e73, type: 2}
+  m_sharedMaterial: {fileID: 5629292342797651162, guid: ab383c9ab5fb08d42b1087b4648a4e73, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.25490198, g: 0.15686275, b: 0.15686275, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3043,6 +3051,10 @@ PrefabInstance:
       value: "Suite \xE0 de nouveaux accords commerciaux, des marchands phrygiens
         d\xE9barquent dans le port d\u2019Ostie et r\xE9pandent le culte de Cyb\xE8le
         en vendant des figurines votives dans le port."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687653713764297116, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7361902526677841872, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_Size.x
