@@ -195,6 +195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alert: {fileID: 3075077658607438954}
+  button: {fileID: 8596283592998916952}
+  explications: {fileID: 6294717641766403433}
 --- !u!212 &7361902526677841872
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -259,8 +261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alert: {fileID: 3075077658607438954}
-  explications: {fileID: 2571214289005814400}
-  button: {fileID: 8596283592998916952}
 --- !u!1 &2135182797637523364
 GameObject:
   m_ObjectHideFlags: 0
