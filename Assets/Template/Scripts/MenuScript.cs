@@ -24,7 +24,7 @@ public class MenuScript : MonoBehaviour
     
     public void StartGame()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void exitGame()
