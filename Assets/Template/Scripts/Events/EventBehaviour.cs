@@ -15,7 +15,7 @@ public abstract class EventBehaviour : MonoBehaviour
     public Dialogue dialoguePeuple;
     public Dialogue dialogueSabotageSuccess;
     public Dialogue dialogueSabotageFail;
-
+    public GameObject PanelDialogue;
     public enum Criticiality{
         Side,
         Main
@@ -46,17 +46,20 @@ public abstract class EventBehaviour : MonoBehaviour
     public void ArmyConsequence()
     {
         DoEvent();
+        PanelDialogue.SetActive(true);
         TextManager.instance.textPanel.SetText(dialogueArmy.text);
     }
 
     public void SpeechConsequence()
     {
         DoEvent();
+        PanelDialogue.SetActive(true);
         TextManager.instance.textPanel.SetText(dialogueSpeech.text);
     }
 
     public void SabotageConsequence(bool success)
     {
+        PanelDialogue.SetActive(true);
         if (success)
         {
             TextManager.instance.textPanel.SetText(dialogueSabotageSuccess.text);
@@ -71,6 +74,7 @@ public abstract class EventBehaviour : MonoBehaviour
     public void PopulationConsequence()
     {
         DoEvent();
+        PanelDialogue.SetActive(true);
         TextManager.instance.textPanel.SetText(dialoguePeuple.text);
     }
 
@@ -88,4 +92,10 @@ public abstract class EventBehaviour : MonoBehaviour
         GameManager.instance.AddMultipliedCorruption(activeCorruptionDelta);
     }
 
+    IEnumerable ChangeText(Dialogue dialogue)
+    {
+        PanelDialogue.SetActive(true);
+        TextManager.instance.textPanel.SetText(dialogue.text);
+        yield return new WaitForSeconds(5);
+    }
 }

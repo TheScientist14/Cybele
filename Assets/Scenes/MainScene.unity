@@ -595,6 +595,7 @@ MonoBehaviour:
   dialoguePeuple: {fileID: 11400000, guid: 5dcb2d3d27718a24aa5aca42efe5a20c, type: 2}
   dialogueSabotageSuccess: {fileID: 11400000, guid: 396cb6dacc5443845b0e543f9008eb6c, type: 2}
   dialogueSabotageFail: {fileID: 11400000, guid: ab948f63758458e47801e1ac9c7e860f, type: 2}
+  PanelDialogue: {fileID: 2055738030}
 --- !u!1001 &116783717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -602,6 +603,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 651790660}
     m_Modifications:
+    - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_Size.x
+      value: 2.496
+      objectReference: {fileID: 0}
+    - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3068
+      objectReference: {fileID: 0}
+    - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 2.496
+      objectReference: {fileID: 0}
+    - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.43
+      objectReference: {fileID: 0}
+    - target: {fileID: -4395474721469304288, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.29
+      objectReference: {fileID: 0}
     - target: {fileID: 343333670188296293, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_Name
       value: RueRome
@@ -620,16 +661,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7361902526677841872, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_Size.x
+      value: 2.496
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361902526677841872, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361902526677841872, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ffd1de447d796a24fa09079fb28547a8, type: 3}
+    - target: {fileID: 7361902526677841872, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_Color.b
-      value: 0.8013254
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7361902526677841872, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_Color.g
-      value: 0.33725488
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7361902526677841872, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_Color.r
-      value: 0.9529412
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361902526677841872, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+      propertyPath: m_DrawMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8649571969355198072, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_RootOrder
@@ -649,11 +706,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8649571969355198072, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.54
+      value: -5.04
       objectReference: {fileID: 0}
     - target: {fileID: 8649571969355198072, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.8
+      value: -1.02
       objectReference: {fileID: 0}
     - target: {fileID: 8649571969355198072, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2342,6 +2399,7 @@ MonoBehaviour:
   dialoguePeuple: {fileID: 11400000, guid: 387ab7503a3699d4185a40a1cff42bb7, type: 2}
   dialogueSabotageSuccess: {fileID: 11400000, guid: 9338b2c14170d4c439586fdded9fad63, type: 2}
   dialogueSabotageFail: {fileID: 11400000, guid: 289c07be9ef3d8d4b90307351ba3a8fc, type: 2}
+  PanelDialogue: {fileID: 2055738030}
 --- !u!1 &1009600524
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,9 +2603,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2055738034}
         m_TargetAssemblyTypeName: TextManager, Assembly-CSharp
-        m_MethodName: NextText
+        m_MethodName: CloseDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2617,6 +2675,7 @@ MonoBehaviour:
   dialoguePeuple: {fileID: 11400000, guid: fb885259d3d7e054dbfde58475999e31, type: 2}
   dialogueSabotageSuccess: {fileID: 11400000, guid: 64b7b8d0c7a5b06488501a808b7f8547, type: 2}
   dialogueSabotageFail: {fileID: 11400000, guid: ce53b807fdb53994c9b04c9c5d8c8e1d, type: 2}
+  PanelDialogue: {fileID: 2055738030}
 --- !u!1 &1115619252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,6 +2815,7 @@ MonoBehaviour:
   dialoguePeuple: {fileID: 11400000, guid: 9982493afcf5fa748b2449f272c00cf8, type: 2}
   dialogueSabotageSuccess: {fileID: 11400000, guid: b52120a32366d9a4d89c283e58cae58f, type: 2}
   dialogueSabotageFail: {fileID: 11400000, guid: 9cda52438f824b24e9776836ab49a60c, type: 2}
+  PanelDialogue: {fileID: 2055738030}
 --- !u!1001 &1191140215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3434,6 +3494,7 @@ MonoBehaviour:
   dialoguePeuple: {fileID: 11400000, guid: 940492f14e8fb044fb85c15ec4f4cc9f, type: 2}
   dialogueSabotageSuccess: {fileID: 11400000, guid: 30bf665693dbf4e4da68001c2baf5529, type: 2}
   dialogueSabotageFail: {fileID: 11400000, guid: 62522cf5415584a45a612d559dae4e49, type: 2}
+  PanelDialogue: {fileID: 2055738030}
 --- !u!1001 &1897064218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3990,15 +4051,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.85882354}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: bb868d4dbccbaf94eaaaee62a6d84500, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
