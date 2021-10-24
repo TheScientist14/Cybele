@@ -11,6 +11,7 @@ public class OnMouseDownScript : MonoBehaviour
     public Button button;
     private bool firstVisit;
     public GameObject explications;
+    
     void Awake()
     {
         camera = Camera.main;
@@ -37,6 +38,7 @@ public class OnMouseDownScript : MonoBehaviour
             if (firstVisit)
             {
                 explications.SetActive(true);
+                GameManager.instance.PauseGame();
                 firstVisit = false;
             }
             GameManager.instance.RemoveEventAwake();
@@ -50,5 +52,6 @@ public class OnMouseDownScript : MonoBehaviour
     private void desableExplications()
     {
         explications.SetActive(false);
+        GameManager.instance.ResumeGame();
     }
 }

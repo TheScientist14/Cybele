@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent CorruptionTempMultiplierReset;
     public UnityEvent UpdateDeckEvent;
     public GameObject[] cards;
+    public GameObject dialogue;
 
     private float timer;
     // corruption related variables
@@ -94,7 +95,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKey("escape"))
         {
-            PauseGame();
+            PauseGameScreen();
         }
         if (IsRunning())
         {
@@ -302,9 +303,14 @@ public class GameManager : MonoBehaviour
         isTuto = false;
     }
 
-    public void PauseGame()
+    public void PauseGameScreen()
     {
         PauseScreen.SetActive(true);
+        PauseGame();
+    }
+    
+    public void PauseGame()
+    {
         isRunning = false;
     }
 
@@ -317,5 +323,10 @@ public class GameManager : MonoBehaviour
     public void SetIsRunning(bool b)
     {
         isRunning = b;
+    }
+
+    public void CloseDialogue()
+    {
+        dialogue.SetActive(false);
     }
 }

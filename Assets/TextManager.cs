@@ -70,8 +70,4 @@ public class TextManager : MonoBehaviour
         NextTextEvent.Invoke();
     }
 
-    public void CloseDialogue()
-    {
-        gameObject.SetActive(false);
-    }
 }
