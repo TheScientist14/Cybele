@@ -16,5 +16,5 @@ MonoBehaviour:
     \xE7a ferait dispara\xEEtre le probl\xE8me. Mais \xE7a ne va pas am\xE9liorer
     ma r\xE9putation, et les prochains troubles risquent d\u2019\xEAtre encore plus
     durs. Et il faut que j\u2019\xE9vite de le faire trop de fois d\u2019affil\xE9e..."
-  speaker: "Tib\xE8re"
+  speaker: Tibere
   nextText: {fileID: 11400000, guid: bda8a7c929c557a49aefe5091e645b23, type: 2}

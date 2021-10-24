@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "On sent que vous n\u2019avez toujours pas compris \xE0 quel point les bonnes
     m\u0153urs de Rome me tiennent \xE0 c\u0153ur."
-  speaker: "Tib\xE8re"
+  speaker: Tibere
   nextText: {fileID: 11400000, guid: 72ef5ef54373d3c498aa3522348a1a4c, type: 2}

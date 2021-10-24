@@ -16,5 +16,5 @@ MonoBehaviour:
     ailleurs. Voyons\u2026 L\u2019Orient ! Tr\xE8s bonne id\xE9e \xE7a ! Peut-\xEAtre
     que ce sera un peu l\u2019occasion de rappeler la puissance de Rome \xE0 ces
     \xE9trangers."
-  speaker: "Tib\xE8re"
+  speaker: Tibere
   nextText: {fileID: 11400000, guid: 360261d360551cb4592e691a9fea63e6, type: 2}

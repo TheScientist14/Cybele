@@ -15,5 +15,5 @@ MonoBehaviour:
   text: "Mais si je n\u2019ai plus de solutions \xE0 disposition, c\u2019est s\xFBr
     que le peuple va s\u2019attrouper et aller voir. Et \xE7a, c\u2019est vraiment
     terrible !"
-  speaker: "Tib\xE8re"
+  speaker: Tibere
   nextText: {fileID: 11400000, guid: ff6d6ff8e57fbd849bc0e009672d6797, type: 2}
