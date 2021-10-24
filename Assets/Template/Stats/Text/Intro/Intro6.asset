@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Une procession de Cyb\xE8le ? Mais c\u2019est qui ces gens ? Pourquoi ils
     hurlent comme \xE7a ?"
-  speaker: "Tib\xE8re"
+  speaker: Tibere
   nextText: {fileID: 11400000, guid: 01f12c6fcd624bd479a97582eb9256d2, type: 2}

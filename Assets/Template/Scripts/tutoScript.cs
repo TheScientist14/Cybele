@@ -12,8 +12,8 @@ public class tutoScript : MonoBehaviour
     public GameObject speech;
     public GameObject sabotage;
     public GameObject peuple;
+    public GameObject dialogePanel;
 
-    private EventBehaviour procession;
     private AlertScript notif;
 
     private int iText;
@@ -21,17 +21,16 @@ public class tutoScript : MonoBehaviour
 
     void Awake()
     {
-        procession = processionObject.GetComponent<EventBehaviour>();
         notif = processionObject.GetComponent<AlertScript>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        dialogePanel.SetActive(true);
         TextManager.instance.NextTextEvent.AddListener(Next);
         iText = 1;
         TextManager.instance.SetText(intro);
-        GameManager.instance.SetIsRunning(false);
         army.GetComponent<CardBehaviour>().Hide();
         sabotage.GetComponent<CardBehaviour>().Hide();
         speech.GetComponent<CardBehaviour>().Hide();
@@ -44,8 +43,7 @@ public class tutoScript : MonoBehaviour
         if (listenProcession)
         {
             if (!notif.isAlertActivate())
-            {
-                TextManager.instance.gameObject.SetActive(true);
+            {   dialogePanel.SetActive(true);
                 TextManager.instance.SetText(intro);
                 army.GetComponent<CardBehaviour>().Hide();
                 sabotage.GetComponent<CardBehaviour>().Hide();
@@ -58,7 +56,6 @@ public class tutoScript : MonoBehaviour
 
     void Next()
     {
-        Debug.Log("Next");
         switch (iText)
         {
             case 3:
@@ -77,23 +74,26 @@ public class tutoScript : MonoBehaviour
                 break;
             case 8:
                 sabotage.GetComponent<CardBehaviour>().Show();
-                army.GetComponent<Button>().enabled = false;
+                sabotage.GetComponent<Button>().enabled = false;
                 break;
             case 9:
                 speech.GetComponent<CardBehaviour>().Show();
-                army.GetComponent<Button>().enabled = false;
+                speech.GetComponent<Button>().enabled = false;
                 break;
             case 10:
                 peuple.GetComponent<CardBehaviour>().Show();
-                army.GetComponent<Button>().enabled = false;
+                peuple.GetComponent<Button>().enabled = false;
                 break;
             case 11:
-                GameManager.instance.AddPassiveCorruption(1);
+                GameManager.instance.AddPassiveCorruption(0.5f);
                 break;
             case 12:
                 TextManager.instance.gameObject.SetActive(false);
-                // TODO allow click
                 EventManager.instance.EventSelectionCleared.AddListener(Next);
+                army.GetComponent<CardBehaviour>().Show();
+                sabotage.GetComponent<CardBehaviour>().Show();
+                speech.GetComponent<CardBehaviour>().Show();
+                peuple.GetComponent<CardBehaviour>().Show();
                 break;
         }
         if(intro.nextText != null)
@@ -105,8 +105,7 @@ public class tutoScript : MonoBehaviour
         else
         {
             EventManager.instance.EventSelectionCleared.RemoveListener(Next);
-            GameManager.instance.EndTuto();
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

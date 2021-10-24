@@ -16,5 +16,5 @@ MonoBehaviour:
     sont maintenant un peu plus convaincus par les valeurs d\xE9cadentes du culte
     de Cyb\xE8le ! Vite, je dois r\xE9agir pour qu\u2019ils ne rejettent pas compl\xE8tement
     la morale de notre belle cit\xE9 !"
-  speaker: "Tib\xE8re"
+  speaker: Tibere
   nextText: {fileID: 11400000, guid: 9c9770c9978bf6344a53ff35ef7da63a, type: 2}

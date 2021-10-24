@@ -17,5 +17,5 @@ MonoBehaviour:
     sur le truc qui a d\xE9j\xE0 commenc\xE9, mais \xE7a devrait diminuer l\u2019influence
     des prochains troubles caus\xE9s par cette d\xE9esse. Apr\xE8s, il faudra du
     temps \xE0 mon orateur pour pr\xE9parer son prochain discours\u2026"
-  speaker: "Tib\xE8re"
+  speaker: Tibere
   nextText: {fileID: 11400000, guid: 759b3f33ca1450b4ba964bb267958906, type: 2}

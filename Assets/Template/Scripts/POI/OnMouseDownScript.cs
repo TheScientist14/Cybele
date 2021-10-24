@@ -41,13 +41,25 @@ public class OnMouseDownScript : MonoBehaviour
             if (firstVisit)
             {
                 explications.SetActive(true);
-                GameManager.instance.PauseGame();
+                try
+                {
+                    GameManager.instance.PauseGame();
+                }
+                catch {};
                 firstVisit = false;
             }
-            GameManager.instance.RemoveEventAwake();
-            camera.transform.position = gameObject.transform.position + new Vector3(0,0,-2.5f);
+            try
+            {
+                GameManager.instance.RemoveEventAwake();
+            }
+            catch { };
+        camera.transform.position = gameObject.transform.position + new Vector3(0,0,-2.5f);
             camera.orthographicSize = 0.75f;
-            GameManager.instance.ActiveDeck();
+            try
+            {
+                GameManager.instance.ActiveDeck();
+            }
+            catch { };
             EventManager.instance.SelectEvent(evnt);
         }
     }
@@ -55,6 +67,10 @@ public class OnMouseDownScript : MonoBehaviour
     private void desableExplications()
     {
         explications.SetActive(false);
-        GameManager.instance.ResumeGame();
+        try
+        {
+            GameManager.instance.ResumeGame();
+        }
+        catch { };
     }
 }

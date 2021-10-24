@@ -16,5 +16,5 @@ MonoBehaviour:
     aupr\xE8s du peuple, mais \xE7a commence \xE0 bien faire. C\u2019\xE9tait peut-\xEAtre
     une mauvaise id\xE9e de l\u2019adopter. Maintenant, tout le monde pr\xE9f\xE9rerait
     que ce soit lui, l\u2019empereur."
-  speaker: "Tib\xE8re"
+  speaker: Tibere
   nextText: {fileID: 11400000, guid: a48cb41bae5545640926bc2ab1115d21, type: 2}

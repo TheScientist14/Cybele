@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Honn\xEAtement, tous ces \xE9v\xE9nements me fatiguent. Je n\u2019arr\xEAte
     pas de repenser \xE0 Capri, cette ville beaucoup plus calme et plus paisible\u2026"
-  speaker: "Tib\xE8re"
+  speaker: Tibere
   nextText: {fileID: 11400000, guid: a1280ba5dc68c4442b39b4f62da86336, type: 2}

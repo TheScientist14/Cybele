@@ -16,5 +16,5 @@ MonoBehaviour:
     Amusez-vous bien dans votre d\xE9cadence et laissez-moi reposer en paix ! Mais
     ne vous \xE9tonnez pas si les bonnes valeurs romaines d\xE9clinent encore plus
     rapidement qu\u2019avant !"
-  speaker: "Tib\xE8re"
+  speaker: Tibere
   nextText: {fileID: 0}

@@ -15,5 +15,5 @@ MonoBehaviour:
   text: "Bon, \xE7a c\u2019est r\xE9gl\xE9. Esp\xE9rons que ces illumin\xE9s ne causent
     pas trop de probl\xE8mes\u2026 Surtout que je ne sais pas vraiment si mes solutions
     vont fonctionner partout exactement de la m\xEAme mani\xE8re..."
-  speaker: "Tib\xE8re"
+  speaker: Tibere
   nextText: {fileID: 0}

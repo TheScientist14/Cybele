@@ -170,6 +170,7 @@ public class GameManager : MonoBehaviour
         else
         {
             ResumeGame();
+            TextManager.instance.gameObject.SetActive(false);
             TextManager.instance.NextTextEvent.RemoveListener(DisplayEvent);
         }
     }
