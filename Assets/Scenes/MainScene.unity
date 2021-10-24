@@ -296,6 +296,9 @@ MonoBehaviour:
   EventHasBeenSelected:
     m_PersistentCalls:
       m_Calls: []
+  EventSelectionCleared:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &45192707
 Transform:
   m_ObjectHideFlags: 0
@@ -419,6 +422,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &114951238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3075077658607438954, guid: cfaa6eaa22b2ff8478a0d995d55d5960, type: 3}
+  m_PrefabInstance: {fileID: 1998052509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &114951241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114951238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20fe50e8f81bd1445ae9f4f31ceb8f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &116783717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -652,8 +672,14 @@ MonoBehaviour:
   CorruptionTempMultiplierReset:
     m_PersistentCalls:
       m_Calls: []
-  deck: {fileID: 2082712503}
-  armyCard: {fileID: 1124008076}
+  UpdateDeckEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  cards:
+  - {fileID: 1124008076}
+  - {fileID: 1599491917}
+  - {fileID: 875411205}
+  - {fileID: 1642275988}
   poi:
   - {fileID: 2079861133}
   - {fileID: 1486381960}
@@ -990,6 +1016,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1005,6 +1032,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6fb23dd7cda57b40bcc41ded644e09f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1677,8 +1716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11fca04c72507744d848047f5426ff7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
-  cameraPositionDefault: {x: 0, y: 0, z: 0}
 --- !u!222 &828959804
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -13,7 +13,6 @@ public class UIScript : MonoBehaviour
     public static UIScript instance;
     public TextMeshProUGUI conversionBarText;
     public TextMeshProUGUI TimerText;
-    public GameObject armyCard;
     public Slider slider;
     
     // Start is called before the first frame update
