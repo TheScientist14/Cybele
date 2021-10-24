@@ -16,6 +16,8 @@ public abstract class EventBehaviour : MonoBehaviour
     public Dialogue dialogueSabotageSuccess;
     public Dialogue dialogueSabotageFail;
     public GameObject PanelDialogue;
+    public GameObject Tybere;
+    public GameObject Phrygien;
     public enum Criticiality{
         Side,
         Main
@@ -47,14 +49,14 @@ public abstract class EventBehaviour : MonoBehaviour
     {
         DoEvent();
         PanelDialogue.SetActive(true);
-        TextManager.instance.textPanel.SetText(dialogueArmy.text);
+        ChangeText(dialogueArmy.text);
     }
 
     public void SpeechConsequence()
     {
         DoEvent();
         PanelDialogue.SetActive(true);
-        TextManager.instance.textPanel.SetText(dialogueSpeech.text);
+        ChangeText(dialogueSpeech.text);
     }
 
     public void SabotageConsequence(bool success)
@@ -62,20 +64,19 @@ public abstract class EventBehaviour : MonoBehaviour
         PanelDialogue.SetActive(true);
         if (success)
         {
-            TextManager.instance.textPanel.SetText(dialogueSabotageSuccess.text);
+            ChangeText(dialogueSabotageSuccess.text);
         }
         else
         {
             DoEvent();
-            TextManager.instance.textPanel.SetText(dialogueSabotageFail.text);
+            ChangeText(dialogueSabotageFail.text);
         }
     }
 
     public void PopulationConsequence()
     {
         DoEvent();
-        PanelDialogue.SetActive(true);
-        TextManager.instance.textPanel.SetText(dialoguePeuple.text);
+        ChangeText(dialoguePeuple.text);
     }
 
     public abstract string GetEventName();
@@ -92,10 +93,9 @@ public abstract class EventBehaviour : MonoBehaviour
         GameManager.instance.AddMultipliedCorruption(activeCorruptionDelta);
     }
 
-    IEnumerable ChangeText(Dialogue dialogue)
+    public void ChangeText(string dialogue)
     {
         PanelDialogue.SetActive(true);
-        TextManager.instance.textPanel.SetText(dialogue.text);
-        yield return new WaitForSeconds(5);
+        TextManager.instance.textPanel.SetText(dialogue);
     }
 }
