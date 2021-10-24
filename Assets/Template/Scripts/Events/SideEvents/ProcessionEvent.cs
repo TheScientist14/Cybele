@@ -10,26 +10,6 @@ public class ProcessionEvent : EventBehaviour
         
     }
 
-    public override void ArmyConsequence()
-    {
-        DoEvent();
-    }
-
-    public override void PopulationConsequence()
-    {
-        DoEvent();
-    }
-
-    public override void SabotageConsequence()
-    {
-        DoEvent();
-    }
-
-    public override void SpeechConsequence()
-    {
-        DoEvent();
-    }
-
     public override string GetEventName()
     {
         return "Procession des adeptes de Cyb�le en pleine rue";

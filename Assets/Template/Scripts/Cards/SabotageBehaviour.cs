@@ -20,15 +20,7 @@ public class SabotageBehaviour : ActionBehaviour
 
     public override void DoAction()
     {
-        if(Random.Range(0, 1) > 0.01 * probabilitySuccess)
-        {
-            // sabotage has failed
-            EventManager.instance.GetSelectedEvent().SabotageConsequence();
-        }
-        else
-        {
-            // sabotage has been successful
-        }
+        EventManager.instance.GetSelectedEvent().SabotageConsequence(Random.Range(0, 1) > 0.01 * probabilitySuccess);
         lastAction = id;
     }
 

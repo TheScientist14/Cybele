@@ -17,7 +17,7 @@ public class TheatreEvent : EventBehaviour
         base.Update();
     }
 
-    public override void ArmyConsequence()
+    public void ArmyConsequence()
     {
         float oldMultiplier = GameManager.instance.GetCorruptionTempMultiplier();
         GameManager.instance.SetCorruptionTempMultiplier(-0.5f);
@@ -33,20 +33,5 @@ public class TheatreEvent : EventBehaviour
     public override string GetEventName()
     {
         return "Pi�ces de th��tre des M�gal�sies";
-    }
-
-    public override void PopulationConsequence()
-    {
-        DoEvent();
-    }
-
-    public override void SabotageConsequence()
-    {
-        DoEvent();
-    }
-
-    public override void SpeechConsequence()
-    {
-        DoEvent();
     }
 }

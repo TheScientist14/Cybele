@@ -45,10 +45,10 @@ public class TextManager : MonoBehaviour
         
     }
 
-    public void SetText(Text text)
+    public void SetText(Dialogue text)
     {
         textPanel.text = text.text;
-        if (text.speaker.Equals("Tibère"))
+        if (text.speaker.Equals("Tibï¿½re"))
         {
             phrygienImg.color = Color.grey;
             romainImg.color = Color.white;

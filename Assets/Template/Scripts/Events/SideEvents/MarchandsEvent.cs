@@ -24,24 +24,4 @@ public class MarchandsEvent : EventBehaviour
     {
         return "Des marchands phrygiens d�barquent";
     }
-
-    public override void PopulationConsequence()
-    {
-        DoEvent();
-    }
-
-    public override void SabotageConsequence()
-    {
-        DoEvent();
-    }
-
-    public override void SpeechConsequence()
-    {
-        DoEvent();
-    }
-
-    public override void ArmyConsequence()
-    {
-        DoEvent();
-    }
 }

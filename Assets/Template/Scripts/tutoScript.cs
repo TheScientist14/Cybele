@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class tutoScript : MonoBehaviour
 {
-    public Text intro;
+    public Dialogue intro;
     public GameObject processionObject;
     public GameObject army;
     public GameObject speech;

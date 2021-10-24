@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Intro4
   m_EditorClassIdentifier: 
   text: "Oh, il se passe quelque chose dans les rues de la ville ? Allons voir \xE7a."
+  speaker: "Tib\xE8re"
   nextText: {fileID: 11400000, guid: a11e9e98e62f36f4b9136560a3858968, type: 2}

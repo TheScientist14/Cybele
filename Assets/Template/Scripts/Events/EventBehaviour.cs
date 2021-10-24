@@ -10,6 +10,11 @@ public abstract class EventBehaviour : MonoBehaviour
     private float delayEnd = float.MaxValue;
     protected float passiveCorruptionDelta = 0.5f;
     protected float activeCorruptionDelta = 5f;
+    public Dialogue dialogueArmy;
+    public Dialogue dialogueSpeech;
+    public Dialogue dialoguePeuple;
+    public Dialogue dialogueSabotageSuccess;
+    public Dialogue dialogueSabotageFail;
 
     public enum Criticiality{
         Side,
@@ -38,10 +43,36 @@ public abstract class EventBehaviour : MonoBehaviour
         }
     }
 
-    public abstract void ArmyConsequence();
-    public abstract void SpeechConsequence();
-    public abstract void SabotageConsequence();
-    public abstract void PopulationConsequence();
+    public void ArmyConsequence()
+    {
+        DoEvent();
+        TextManager.instance.textPanel.SetText(dialogueArmy.text);
+    }
+
+    public void SpeechConsequence()
+    {
+        DoEvent();
+        TextManager.instance.textPanel.SetText(dialogueSpeech.text);
+    }
+
+    public void SabotageConsequence(bool success)
+    {
+        if (success)
+        {
+            TextManager.instance.textPanel.SetText(dialogueSabotageSuccess.text);
+        }
+        else
+        {
+            DoEvent();
+            TextManager.instance.textPanel.SetText(dialogueSabotageFail.text);
+        }
+    }
+
+    public void PopulationConsequence()
+    {
+        DoEvent();
+        TextManager.instance.textPanel.SetText(dialoguePeuple.text);
+    }
 
     public abstract string GetEventName();
 

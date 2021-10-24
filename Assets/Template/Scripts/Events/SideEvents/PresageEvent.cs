@@ -18,11 +18,6 @@ public class PresageEvent : EventBehaviour
         base.Update();
     }
 
-    public override void ArmyConsequence()
-    {
-        DoEvent();
-    }
-
     public override Criticiality GetEventCriticality()
     {
         return Criticiality.Side;
@@ -30,22 +25,8 @@ public class PresageEvent : EventBehaviour
 
     public override string GetEventName()
     {
-        return "Sombre présage";
+        return "Sombre prï¿½sage";
     }
 
-    public override void PopulationConsequence()
-    {
-        DoEvent();
-    }
-
-    public override void SabotageConsequence()
-    {
-        DoEvent();
-    }
-
-    public override void SpeechConsequence()
-    {
-        DoEvent();
-    }
 
 }
