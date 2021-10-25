@@ -6,6 +6,7 @@
     <e p="C:\Users\User\Documents\Cours\GamingCampus\Unity\Projet1\Cybele" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="EndScript.cs" t="Include" />
         <e p="Template" t="Include">
           <e p="Assets" t="Include">
             <e p="packages" t="Include">
@@ -43,30 +44,42 @@
             </e>
           </e>
           <e p="Scripts" t="Include">
+            <e p="CameraBehaviour.cs" t="Include" />
             <e p="Cards" t="Include">
               <e p="ActionBehaviour.cs" t="Include" />
               <e p="ArmyBehaviour.cs" t="Include" />
               <e p="CardBehaviour.cs" t="Include" />
               <e p="CardSelection.cs" t="Include" />
+              <e p="ConfirmationGUIBehaviour.cs" t="Include" />
+              <e p="PeupleBehaviour.cs" t="Include" />
+              <e p="SabotageBehaviour.cs" t="Include" />
+              <e p="SpeechBehaviour.cs" t="Include" />
             </e>
-            <e p="Event.cs" t="Include" />
+            <e p="Dialogue.cs" t="Include" />
             <e p="Events" t="Include">
+              <e p="Event.cs" t="Include" />
               <e p="EventBehaviour.cs" t="Include" />
               <e p="EventList.cs" t="Include" />
               <e p="EventManager.cs" t="Include" />
-              <e p="PresageEvent.cs" t="Include" />
-              <e p="ProcessionEvent.cs" t="Include" />
-              <e p="RestrictionEvent.cs" t="Include" />
+              <e p="SideEvents" t="Include">
+                <e p="MarchandsEvent.cs" t="Include" />
+                <e p="PresageEvent.cs" t="Include" />
+                <e p="ProcessionEvent.cs" t="Include" />
+                <e p="RestrictionEvent.cs" t="Include" />
+                <e p="TheatreEvent.cs" t="Include" />
+              </e>
             </e>
             <e p="GameManager.cs" t="Include" />
-            <e p="MainMapBehaviour.cs" t="Include" />
+            <e p="MenuScript.cs" t="Include" />
             <e p="POI" t="Include">
               <e p="AlertScript.cs" t="Include" />
               <e p="OnMouseDownScript.cs" t="Include" />
             </e>
+            <e p="tutoScript.cs" t="Include" />
             <e p="UIScript.cs" t="Include" />
           </e>
         </e>
+        <e p="TextManager.cs" t="Include" />
       </e>
       <e p="Cybele.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

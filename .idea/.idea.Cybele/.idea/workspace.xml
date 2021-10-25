@@ -4,9 +4,11 @@
     <list default="true" id="ab21d6b9-a453-4588-8833-d9a3061a9519" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cybele/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cybele/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cybele/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cybele/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Antoine.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Antoine.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Template/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Template/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Template/Scripts/UIScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Template/Scripts/UIScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tuto.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tuto.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Template/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Template/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Template/Scripts/POI/OnMouseDownScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Template/Scripts/POI/OnMouseDownScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Template/Scripts/tutoScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Template/Scripts/tutoScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,16 +22,34 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../TowerDefense/Assets/Template/Scripts/Game/BankBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/POI/AlertScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Events/Event.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EndScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/POI/OnMouseDownScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Cards/PeupleBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Cards/SabotageBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Cards/SpeechBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Cards/ConfirmationGUIBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/MenuScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Events/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TowerDefense/Assets/Template/Scripts/UI/TextManagement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Events/EventList.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/POI/AlertScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Events/SideEvents/MarchandsEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Events/SideEvents/PresageEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/UIScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Events/EventBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/MainMapBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/POI/OnMouseDownScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Event.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/CameraBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Events/SideEvents/ProcessionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/tutoScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Cards/ActionBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Events/SideEvents/RestrictionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Cards/ArmyBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Events/SideEvents/TheatreEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Cards/CardBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Dialogue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Template/Scripts/Cards/CardSelection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TowerDefense/Assets/Template/Scripts/Game/GameManagement.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -43,11 +63,39 @@
         <option value="$PROJECT_DIR$/Assets/UIScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Template/Scripts/Event.cs" />
         <option value="$PROJECT_DIR$/Assets/AlertScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Template/Scripts/POI/AlertScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Template/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Events/RestrictionEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Events/MarchandsEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Events/PresageEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Events/ProcessionEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Events/TheatreEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Template/Scripts/MainMapBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Template/Scripts/POI/OnMouseDownScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/StartButtonBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/MenuScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/TestScri.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Events/EventManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/POI/AlertScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/tutoScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Template/Scripts/UIScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Events/SideEvents/MarchandsEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Events/SideEvents/PresageEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Events/SideEvents/ProcessionEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Events/SideEvents/RestrictionEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Events/SideEvents/TheatreEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Dialogue.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Cards/ConfirmationGUIBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Cards/CardSelection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Cards/CardBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Cards/ActionBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Cards/ArmyBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Cards/PeupleBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Cards/SabotageBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Cards/SpeechBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/EndScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/Events/EventBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/TextManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/tutoScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/POI/OnMouseDownScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Template/Scripts/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -79,7 +127,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1634975582133</updated>
-      <workItem from="1634975585565" duration="6518000" />
+      <workItem from="1634975585565" duration="37264000" />
+      <workItem from="1635059218364" duration="27434000" />
+      <workItem from="1635183089986" duration="3343000" />
     </task>
     <servers />
   </component>
@@ -91,7 +141,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

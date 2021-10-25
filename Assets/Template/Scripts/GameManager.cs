@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     private float storyMultiplier; // never reset
     private bool isGameFinished;
     private bool isRunning;
-    private bool isTuto;
+    public bool isTuto;
     private bool armyActivated;
     private Dialogue currentDialogue;
     private bool hasCorruptionReached50 = false;
@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
                 {
                     armyActivated = false;
                     UpdateDeckEvent.Invoke();
-                    //PauseGame();
+                    PauseGame();
                     dialogue.SetActive(true);
                     TextManager.instance.NextTextEvent.AddListener(DisplayEvent);
                     currentDialogue = Germanicus;
@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
             } else if ((int) timer == 108)
             {
                 positifEventPOI = 1;
-                //PauseGame();
+                PauseGame();
                 TextManager.instance.NextTextEvent.AddListener(DisplayEvent);
                 currentDialogue = Capri;
                 TextManager.instance.SetText(currentDialogue);
@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
                 {
                     storyMultiplier = 2;
                     UpdateDeckEvent.Invoke();
-                    //PauseGame();
+                    PauseGame();
                     TextManager.instance.NextTextEvent.AddListener(DisplayEvent);
                     currentDialogue = Caligula;
                     TextManager.instance.SetText(currentDialogue);
@@ -370,13 +370,13 @@ public class GameManager : MonoBehaviour
     
     public void PauseGame()
     {
-        isRunning = false;
+        Time.timeScale = 0;
     }
 
     public void ResumeGame()
     {
         PauseScreen.SetActive(false);
-        isRunning = true;
+        Time.timeScale = 1;
     }
 
     public void EndGame()

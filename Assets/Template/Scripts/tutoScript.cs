@@ -102,10 +102,15 @@ public class tutoScript : MonoBehaviour
             TextManager.instance.SetText(intro);
             iText++;
         }
-        else
+        else if(GameManager.instance.isTuto)
         {
             EventManager.instance.EventSelectionCleared.RemoveListener(Next);
+            GameManager.instance.isTuto = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            GameManager.instance.CloseDialogue();
         }
     }
 }

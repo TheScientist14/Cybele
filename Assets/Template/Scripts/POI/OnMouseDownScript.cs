@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,11 @@ public class OnMouseDownScript : MonoBehaviour
     private bool firstVisit;
     public GameObject explications;
     public AudioClip sound;
+    public GameObject deck;
+    public GameObject army;
+    public GameObject speech;
+    public GameObject sabotage;
+    public GameObject peuple;
 
     void Awake()
     {
@@ -40,12 +46,16 @@ public class OnMouseDownScript : MonoBehaviour
             alert.SetActive(false);
             if (firstVisit)
             {
+                army.GetComponent<Button>().interactable = false;
+                sabotage.GetComponent<Button>().interactable = false;
+                speech.GetComponent<Button>().interactable = false;
+                peuple.GetComponent<Button>().interactable = false;
                 explications.SetActive(true);
                 try
                 {
                     GameManager.instance.PauseGame();
                 }
-                catch {};
+                catch {}
                 firstVisit = false;
             }
             try
@@ -67,6 +77,10 @@ public class OnMouseDownScript : MonoBehaviour
     public void desableExplications()
     {
         explications.SetActive(false);
+        army.GetComponent<Button>().interactable = true;
+        sabotage.GetComponent<Button>().interactable = true;
+        speech.GetComponent<Button>().interactable = true;
+        peuple.GetComponent<Button>().interactable = true;
         try
         {
             GameManager.instance.ResumeGame();
